@@ -2,7 +2,7 @@
 
 Bootstrap is a sleek, intuitive, and powerful front-end framework for faster and easier web development, created by [Mark Otto](https://twitter.com/mdo) and [Jacob Thornton](https://twitter.com/fat), and maintained by the [core team](https://github.com/orgs/twbs/people) with the massive support and involvement of the community.
 
-To get started, check out <https://getbootstrap.com/>!
+To get started, check out (original: <https://getbootstrap.com/>, this forked: <https://rundiz.github.io/bootstrap3/>)!
 
 ### What's new.
 
@@ -39,7 +39,7 @@ Several quick start options are available:
 * [Download the latest release](https://github.com/rundiz/bootstrap3/releases/latest).
 * Clone the repo: `git clone https://github.com/rundiz/bootstrap3.git`.
 
-Read the [Getting started page](https://getbootstrap.com/docs/3.4/getting-started/) for information on the framework contents, templates and examples, and more.
+Read the [Getting started page](https://rundiz.github.io/bootstrap3/getting-started/) for information on the framework contents, templates and examples, and more.
 
 ### What's included
 
@@ -78,7 +78,7 @@ Do not accept feature requests. This repository is for make Bootstrap 3 using mo
 
 ## Documentation
 
-Bootstrap's documentation, included in this repo in the root directory, is built with [Jekyll](https://jekyllrb.com/) and publicly hosted on GitHub Pages at <https://getbootstrap.com/>. The docs may also be run locally.
+Bootstrap's documentation, included in this repo in the root directory, is built with [Jekyll](https://jekyllrb.com/) and publicly hosted on GitHub Pages at <https://rundiz.github.io/bootstrap3/>. The docs may also be run locally.
 
 ### Running documentation locally
 
