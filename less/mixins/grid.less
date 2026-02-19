@@ -14,7 +14,7 @@
 // Creates a wrapper for a series of columns
 .make-row(@gutter: var(--bs-grid-gutter-width)) {
   margin-right: ~"round(down, calc("@gutter~" / -2), 1px)";
-  margin-left: ~"round(up, calc("@gutter~" / -2))";
+  margin-left: ~"round(up, calc("@gutter~" / -2), 1px)";
   &:extend(.clearfix all);
 }
 
