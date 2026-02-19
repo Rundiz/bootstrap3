@@ -2057,8 +2057,8 @@ pre code {
 .row {
   margin-right: round(down, -webkit-calc( var(--bs-grid-gutter-width)  / -2), 1px);
   margin-right: round(down, calc( var(--bs-grid-gutter-width)  / -2), 1px);
-  margin-left: round(up, -webkit-calc( var(--bs-grid-gutter-width)  / -2));
-  margin-left: round(up, calc( var(--bs-grid-gutter-width)  / -2));
+  margin-left: round(up, -webkit-calc( var(--bs-grid-gutter-width)  / -2), 1px);
+  margin-left: round(up, calc( var(--bs-grid-gutter-width)  / -2), 1px);
 }
 .row-no-gutters {
   margin-right: 0;
@@ -3551,8 +3551,8 @@ select[multiple].input-lg {
 .form-horizontal .form-group {
   margin-right: round(down, -webkit-calc( var(--bs-grid-gutter-width)  / -2), 1px);
   margin-right: round(down, calc( var(--bs-grid-gutter-width)  / -2), 1px);
-  margin-left: round(up, -webkit-calc( var(--bs-grid-gutter-width)  / -2));
-  margin-left: round(up, calc( var(--bs-grid-gutter-width)  / -2));
+  margin-left: round(up, -webkit-calc( var(--bs-grid-gutter-width)  / -2), 1px);
+  margin-left: round(up, calc( var(--bs-grid-gutter-width)  / -2), 1px);
 }
 @media (min-width: 768px) {
   .form-horizontal .control-label {

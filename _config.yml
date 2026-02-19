@@ -22,7 +22,7 @@ plugins:
 # Custom vars
 title:            Bootstrap
 description:      "The world's most popular mobile-first and responsive front-end framework."
-current_version:  3.4.1.0
+current_version:  3.4.1.1
 docs_version:     3.4
 repo:             https://github.com/twbs/bootstrap
 sass_repo:        https://github.com/twbs/bootstrap-sass
@@ -39,8 +39,8 @@ themes:           https://themes.getbootstrap.com
 cdn:
   # See https://www.srihash.org for info on how to generate the hashes
   css:            https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css
-  css_hash:       "sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu"
+  css_hash:       "sha384-2x+YxZwa+jQVHMXuDQOvxGIPoOxWexMM3/cjOZhxKiw6MDviw+QCVMKfhQIUh8Dk"
   css_theme:      https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap-theme.min.css
-  css_theme_hash: "sha384-6pzBo3FDv/PJ8r2KRkGHifhEocL+1X2rVCTTkUfGk7/0pbek5mMa1upzvWbrUbOZ"
+  css_theme_hash: "sha384-svr2mW9Rhrkg4tK7j/B49SxyalZFkepwV0PtfiISIyy/1CF7lQ4NEY4yUtDgC+L8"
   js:             https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js
-  js_hash:        "sha384-aJ21OjlMXNL5UyIl/XNwTMqvzeRMZH2w8c5cRVpzpU8Y5bApTppSuUkhZXN0VxHd"
+  js_hash:        "sha384-gWSXN9LwlFBCgcawtZavZwOpuWQMqM2ixf6nX2/VAsixQ5E+kaiYU59iC+zJlr0M"
