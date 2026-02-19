@@ -105,6 +105,17 @@ Moreover, if your pull request contains JavaScript patches or features, you must
 
 Editor preferences are available in the [editor config](https://github.com/rundiz/bootstrap3/blob/v3-dev/.editorconfig) for easy use in common text editors. Read more and download plugins at <https://editorconfig.org/>.
 
+### Development
+
+Recommend to use Docker to run Node package commands (`npm run ..`).
+
+1. Install [Docker](https://www.docker.com/).
+2. From the root `/bootstrap` directory, run command `docker build -t mynode:latest .` to install **Dockerfile**.
+3. Run commands `docker volume create docker_node_modules`, `docker volume create docker_ruby_bundle` to create volumes.
+4. Run command `docker run --rm -it -v "%CD%:/app" -v docker_node_modules:/app/node_modules -w /app mynode:latest npm ci` to clean install Node packages once.
+5. Run command `docker run --rm -it -v "%CD%:/app" -v docker_ruby_bundle:/bundle -w /app mynode:latest bundle install` to install Ruby gems once.
+6. And then you can run command in package.json `scripts`. For example: `docker run --rm -it -v "%CD%:/app" -v docker_node_modules:/app/node_modules -v docker_ruby_bundle:/bundle -w /app mynode:latest npm run release`.
+
 
 ## Community
 
