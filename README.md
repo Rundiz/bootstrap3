@@ -29,8 +29,6 @@ There is no new or extra features than original Bootstrap 3 and no new feature r
 
 This repo. use CSS variable for example `--background-color: #fff;` and `background-color: var(--background-color);`. So, it does not supported Internet Explorer (IE). If you would like to use old browsers, please use original Bootstrap 3.
 
-This repo. use [CSS relative color syntax](https://caniuse.com/css-relative-colors) and it currently does not supported in all web browsers yet. Please check for current support on a link.
-
 
 ## Quick start
 
@@ -88,7 +86,7 @@ Bootstrap's documentation, included in this repo in the root directory, is built
 2. From the root `/bootstrap` directory, run `bundle exec jekyll serve` in the command line.
 4. Open `http://localhost:9001` in your browser, and voilà.
 
-#### Use Docker
+#### Use Docker (recommended)
 1. Install [Docker](https://www.docker.com/) and then install [Docker image named **jekyll**](https://hub.docker.com/r/jekyll/jekyll/) via command `docker pull jekyll/jekyll:3.8.6`.
 2. From the root `/bootstrap` directory, run Docker image via command `docker run --rm -it --volume="%cd%:/srv/jekyll" --publish 9001:9001  jekyll/jekyll:3.8.6 jekyll serve`. You may replace `%cd%` to `$PWD` on Linux.  
    Or you may use command `docker run --rm -it --volume="%cd%:/srv/jekyll" --publish 9001:9001 --publish 35729:35729  jekyll/jekyll:3.8.6 jekyll serve --watch --force_polling --livereload` to make it auto regenerate the document and live reload on Windows.
