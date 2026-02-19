@@ -1,4 +1,4 @@
-FROM node:latest
+FROM node:25.6.1-bookworm
 
 # Project working directory inside the container
 WORKDIR /app
