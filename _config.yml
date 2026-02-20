@@ -22,15 +22,15 @@ plugins:
 # Custom vars
 title:            Bootstrap
 description:      "The world's most popular mobile-first and responsive front-end framework."
-current_version:  3.4.1.1
+current_version:  3.4.2
 docs_version:     3.4
 repo:             https://github.com/twbs/bootstrap
 sass_repo:        https://github.com/twbs/bootstrap-sass
 
 download:
-  source:         https://github.com/twbs/bootstrap/archive/v3.4.1.zip
-  dist:           https://github.com/twbs/bootstrap/releases/download/v3.4.1/bootstrap-3.4.1-dist.zip
-  sass:           https://github.com/twbs/bootstrap-sass/archive/v3.4.1.tar.gz
+  source:         https://github.com/twbs/bootstrap/archive/v3.4.2.zip
+  dist:           https://github.com/twbs/bootstrap/releases/download/v3.4.2/bootstrap-3.4.2-dist.zip
+  sass:           https://github.com/twbs/bootstrap-sass/archive/v3.4.2.tar.gz
 
 blog:             https://blog.getbootstrap.com
 expo:             https://expo.getbootstrap.com
@@ -38,9 +38,9 @@ themes:           https://themes.getbootstrap.com
 
 cdn:
   # See https://www.srihash.org for info on how to generate the hashes
-  css:            https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css
-  css_hash:       "sha384-2x+YxZwa+jQVHMXuDQOvxGIPoOxWexMM3/cjOZhxKiw6MDviw+QCVMKfhQIUh8Dk"
-  css_theme:      https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap-theme.min.css
-  css_theme_hash: "sha384-svr2mW9Rhrkg4tK7j/B49SxyalZFkepwV0PtfiISIyy/1CF7lQ4NEY4yUtDgC+L8"
-  js:             https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js
-  js_hash:        "sha384-gWSXN9LwlFBCgcawtZavZwOpuWQMqM2ixf6nX2/VAsixQ5E+kaiYU59iC+zJlr0M"
+  css:            https://stackpath.bootstrapcdn.com/bootstrap/3.4.2/css/bootstrap.min.css
+  css_hash:       "sha384-a7RU8WQL4LgxvhvKaZ9KiSZ2nsr7MRj13NdRF8gnL7I6Mv2KZdSwv3DzG8x5fu7O"
+  css_theme:      https://stackpath.bootstrapcdn.com/bootstrap/3.4.2/css/bootstrap-theme.min.css
+  css_theme_hash: "sha384-RTVwMZuIqxcdhTAxAYRZ1I1pKW9UDlr/yc/Jsg34w04VWK2Fk3hivmz63Fg/Ocam"
+  js:             https://stackpath.bootstrapcdn.com/bootstrap/3.4.2/js/bootstrap.min.js
+  js_hash:        "sha384-CRGyFWx9NjibOSVmT96huOfOwTmOktkhMXEnCvjVLi2+OJPISJZyZdp3jCth8HIl"
