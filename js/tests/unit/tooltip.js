@@ -1241,11 +1241,6 @@ $(function () {
   })
 
   QUnit.test('should correctly position tooltips on SVG elements', function (assert) {
-    if (!window.SVGElement) {
-      // Skip IE8 since it doesn't support SVG
-      assert.expect(0)
-      return
-    }
     assert.expect(2)
 
     var done = assert.async()

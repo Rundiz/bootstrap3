@@ -157,8 +157,7 @@
 
   function getTargetFromTrigger($trigger) {
     var href
-    var target = $trigger.attr('data-target')
-      || (href = $trigger.attr('href')) && href.replace(/.*(?=#[^\s]+$)/, '') // strip for ie7
+    var target = $trigger.attr('data-target') || $trigger.attr('href')
 
     return $(document).find(target)
   }

@@ -210,9 +210,6 @@
   var clickHandler = function (e) {
     var $this   = $(this)
     var href    = $this.attr('href')
-    if (href) {
-      href = href.replace(/.*(?=#[^\s]+$)/, '') // strip for ie7
-    }
 
     var target  = $this.attr('data-target') || href
     var $target = $(document).find(target)
