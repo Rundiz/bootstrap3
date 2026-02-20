@@ -43,4 +43,4 @@ cdn:
   css_theme:      https://stackpath.bootstrapcdn.com/bootstrap/3.4.2/css/bootstrap-theme.min.css
   css_theme_hash: "sha384-zIgkjOtSaqAKA2S+dLZ/PZcFhUWu9FNqdNe1EpcMKW2rPTtFihnB96cwVIdAN4nG"
   js:             https://stackpath.bootstrapcdn.com/bootstrap/3.4.2/js/bootstrap.min.js
-  js_hash:        "sha384-+exZYeloWt1AtmGOzpMywr9rWcJwS01LJvx5UkDAXtjXfTxSvxBLst80CbuucfkD"
+  js_hash:        "sha384-T6duU810h05V2xJbWf+s83Kq40xbYZIIM2LbNh0hSMXDzIhyrOsZwcQEnm1Q6xDv"
