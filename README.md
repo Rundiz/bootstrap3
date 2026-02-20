@@ -128,6 +128,13 @@ After you completed install step 1 to 5 above, you can use following commands.
 * Run command `docker run --rm -it -v "%CD%:/app" -v docker_node_modules:/app/node_modules -v docker_ruby_bundle:/bundle -w /app mynode:latest node_modules/grunt/bin/grunt dist-css` to build CSS files.
 * Run command `docker run --rm -it -v "%CD%:/app" -v docker_node_modules:/app/node_modules -v docker_ruby_bundle:/bundle -w /app mynode:latest node_modules/grunt/bin/grunt dist` to build full distribution task files (CSS, JS).
 
+#### Before commit, publish
+
+* Run package.json `change-version` if need.
+* Run package.json `test` if need.
+* Run package.json `release` to rebuild assets, generate release zip, update hash.
+* Then run `git add ...` and `git commit ...`.
+
 
 ## Community
 
