@@ -10,7 +10,6 @@
 .btn-warning,
 .btn-danger {
   text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.2);
-  -webkit-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.15), 0 1px 1px rgba(0, 0, 0, 0.075);
   box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.15), 0 1px 1px rgba(0, 0, 0, 0.075);
 }
 .btn-default:active,
@@ -25,7 +24,6 @@
 .btn-info.active,
 .btn-warning.active,
 .btn-danger.active {
-  -webkit-box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
   box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
 }
 .btn-default.disabled,
@@ -46,7 +44,6 @@ fieldset[disabled] .btn-success,
 fieldset[disabled] .btn-info,
 fieldset[disabled] .btn-warning,
 fieldset[disabled] .btn-danger {
-  -webkit-box-shadow: none;
   box-shadow: none;
 }
 .btn-default .badge,
@@ -62,27 +59,20 @@ fieldset[disabled] .btn-danger {
   background-image: none;
 }
 .btn-default {
-  background-image: -webkit-linear-gradient(top, var(--bs-btn-default-bg) 0%, hsl(from var(--bs-btn-default-bg) h s -webkit-calc(l - 12)) 100%);
-  background-image: -webkit-gradient(linear, left top, left bottom, from(var(--bs-btn-default-bg)), to(hsl(from var(--bs-btn-default-bg) h s calc(l - 12))));
-  background-image: -o-linear-gradient(top, var(--bs-btn-default-bg) 0%, hsl(from var(--bs-btn-default-bg) h s calc(l - 12)) 100%);
   background-image: linear-gradient(to bottom, var(--bs-btn-default-bg) 0%, hsl(from var(--bs-btn-default-bg) h s calc(l - 12)) 100%);
   background-repeat: repeat-x;
-  border-color: hsl(from var(--bs-btn-default-bg) h s -webkit-calc(l - 14));
   border-color: hsl(from var(--bs-btn-default-bg) h s calc(l - 14));
   text-shadow: 0 1px 0 #fff;
   border-color: #ccc;
 }
 .btn-default:hover,
 .btn-default:focus {
-  background-color: hsl(from var(--bs-btn-default-bg) h s -webkit-calc(l - 12));
   background-color: hsl(from var(--bs-btn-default-bg) h s calc(l - 12));
   background-position: 0 -15px;
 }
 .btn-default:active,
 .btn-default.active {
-  background-color: hsl(from var(--bs-btn-default-bg) h s -webkit-calc(l - 12));
   background-color: hsl(from var(--bs-btn-default-bg) h s calc(l - 12));
-  border-color: hsl(from var(--bs-btn-default-bg) h s -webkit-calc(l - 14));
   border-color: hsl(from var(--bs-btn-default-bg) h s calc(l - 14));
 }
 .btn-default.disabled,
@@ -103,30 +93,22 @@ fieldset[disabled] .btn-default:active,
 .btn-default.disabled.active,
 .btn-default[disabled].active,
 fieldset[disabled] .btn-default.active {
-  background-color: hsl(from var(--bs-btn-default-bg) h s -webkit-calc(l - 12));
   background-color: hsl(from var(--bs-btn-default-bg) h s calc(l - 12));
   background-image: none;
 }
 .btn-primary {
-  background-image: -webkit-linear-gradient(top, var(--bs-btn-primary-bg) 0%, hsl(from var(--bs-btn-primary-bg) h s -webkit-calc(l - 12)) 100%);
-  background-image: -webkit-gradient(linear, left top, left bottom, from(var(--bs-btn-primary-bg)), to(hsl(from var(--bs-btn-primary-bg) h s calc(l - 12))));
-  background-image: -o-linear-gradient(top, var(--bs-btn-primary-bg) 0%, hsl(from var(--bs-btn-primary-bg) h s calc(l - 12)) 100%);
   background-image: linear-gradient(to bottom, var(--bs-btn-primary-bg) 0%, hsl(from var(--bs-btn-primary-bg) h s calc(l - 12)) 100%);
   background-repeat: repeat-x;
-  border-color: hsl(from var(--bs-btn-primary-bg) h s -webkit-calc(l - 14));
   border-color: hsl(from var(--bs-btn-primary-bg) h s calc(l - 14));
 }
 .btn-primary:hover,
 .btn-primary:focus {
-  background-color: hsl(from var(--bs-btn-primary-bg) h s -webkit-calc(l - 12));
   background-color: hsl(from var(--bs-btn-primary-bg) h s calc(l - 12));
   background-position: 0 -15px;
 }
 .btn-primary:active,
 .btn-primary.active {
-  background-color: hsl(from var(--bs-btn-primary-bg) h s -webkit-calc(l - 12));
   background-color: hsl(from var(--bs-btn-primary-bg) h s calc(l - 12));
-  border-color: hsl(from var(--bs-btn-primary-bg) h s -webkit-calc(l - 14));
   border-color: hsl(from var(--bs-btn-primary-bg) h s calc(l - 14));
 }
 .btn-primary.disabled,
@@ -147,30 +129,22 @@ fieldset[disabled] .btn-primary:active,
 .btn-primary.disabled.active,
 .btn-primary[disabled].active,
 fieldset[disabled] .btn-primary.active {
-  background-color: hsl(from var(--bs-btn-primary-bg) h s -webkit-calc(l - 12));
   background-color: hsl(from var(--bs-btn-primary-bg) h s calc(l - 12));
   background-image: none;
 }
 .btn-success {
-  background-image: -webkit-linear-gradient(top, var(--bs-btn-success-bg) 0%, hsl(from var(--bs-btn-success-bg) h s -webkit-calc(l - 12)) 100%);
-  background-image: -webkit-gradient(linear, left top, left bottom, from(var(--bs-btn-success-bg)), to(hsl(from var(--bs-btn-success-bg) h s calc(l - 12))));
-  background-image: -o-linear-gradient(top, var(--bs-btn-success-bg) 0%, hsl(from var(--bs-btn-success-bg) h s calc(l - 12)) 100%);
   background-image: linear-gradient(to bottom, var(--bs-btn-success-bg) 0%, hsl(from var(--bs-btn-success-bg) h s calc(l - 12)) 100%);
   background-repeat: repeat-x;
-  border-color: hsl(from var(--bs-btn-success-bg) h s -webkit-calc(l - 14));
   border-color: hsl(from var(--bs-btn-success-bg) h s calc(l - 14));
 }
 .btn-success:hover,
 .btn-success:focus {
-  background-color: hsl(from var(--bs-btn-success-bg) h s -webkit-calc(l - 12));
   background-color: hsl(from var(--bs-btn-success-bg) h s calc(l - 12));
   background-position: 0 -15px;
 }
 .btn-success:active,
 .btn-success.active {
-  background-color: hsl(from var(--bs-btn-success-bg) h s -webkit-calc(l - 12));
   background-color: hsl(from var(--bs-btn-success-bg) h s calc(l - 12));
-  border-color: hsl(from var(--bs-btn-success-bg) h s -webkit-calc(l - 14));
   border-color: hsl(from var(--bs-btn-success-bg) h s calc(l - 14));
 }
 .btn-success.disabled,
@@ -191,30 +165,22 @@ fieldset[disabled] .btn-success:active,
 .btn-success.disabled.active,
 .btn-success[disabled].active,
 fieldset[disabled] .btn-success.active {
-  background-color: hsl(from var(--bs-btn-success-bg) h s -webkit-calc(l - 12));
   background-color: hsl(from var(--bs-btn-success-bg) h s calc(l - 12));
   background-image: none;
 }
 .btn-info {
-  background-image: -webkit-linear-gradient(top, var(--bs-btn-info-bg) 0%, hsl(from var(--bs-btn-info-bg) h s -webkit-calc(l - 12)) 100%);
-  background-image: -webkit-gradient(linear, left top, left bottom, from(var(--bs-btn-info-bg)), to(hsl(from var(--bs-btn-info-bg) h s calc(l - 12))));
-  background-image: -o-linear-gradient(top, var(--bs-btn-info-bg) 0%, hsl(from var(--bs-btn-info-bg) h s calc(l - 12)) 100%);
   background-image: linear-gradient(to bottom, var(--bs-btn-info-bg) 0%, hsl(from var(--bs-btn-info-bg) h s calc(l - 12)) 100%);
   background-repeat: repeat-x;
-  border-color: hsl(from var(--bs-btn-info-bg) h s -webkit-calc(l - 14));
   border-color: hsl(from var(--bs-btn-info-bg) h s calc(l - 14));
 }
 .btn-info:hover,
 .btn-info:focus {
-  background-color: hsl(from var(--bs-btn-info-bg) h s -webkit-calc(l - 12));
   background-color: hsl(from var(--bs-btn-info-bg) h s calc(l - 12));
   background-position: 0 -15px;
 }
 .btn-info:active,
 .btn-info.active {
-  background-color: hsl(from var(--bs-btn-info-bg) h s -webkit-calc(l - 12));
   background-color: hsl(from var(--bs-btn-info-bg) h s calc(l - 12));
-  border-color: hsl(from var(--bs-btn-info-bg) h s -webkit-calc(l - 14));
   border-color: hsl(from var(--bs-btn-info-bg) h s calc(l - 14));
 }
 .btn-info.disabled,
@@ -235,30 +201,22 @@ fieldset[disabled] .btn-info:active,
 .btn-info.disabled.active,
 .btn-info[disabled].active,
 fieldset[disabled] .btn-info.active {
-  background-color: hsl(from var(--bs-btn-info-bg) h s -webkit-calc(l - 12));
   background-color: hsl(from var(--bs-btn-info-bg) h s calc(l - 12));
   background-image: none;
 }
 .btn-warning {
-  background-image: -webkit-linear-gradient(top, var(--bs-btn-warning-bg) 0%, hsl(from var(--bs-btn-warning-bg) h s -webkit-calc(l - 12)) 100%);
-  background-image: -webkit-gradient(linear, left top, left bottom, from(var(--bs-btn-warning-bg)), to(hsl(from var(--bs-btn-warning-bg) h s calc(l - 12))));
-  background-image: -o-linear-gradient(top, var(--bs-btn-warning-bg) 0%, hsl(from var(--bs-btn-warning-bg) h s calc(l - 12)) 100%);
   background-image: linear-gradient(to bottom, var(--bs-btn-warning-bg) 0%, hsl(from var(--bs-btn-warning-bg) h s calc(l - 12)) 100%);
   background-repeat: repeat-x;
-  border-color: hsl(from var(--bs-btn-warning-bg) h s -webkit-calc(l - 14));
   border-color: hsl(from var(--bs-btn-warning-bg) h s calc(l - 14));
 }
 .btn-warning:hover,
 .btn-warning:focus {
-  background-color: hsl(from var(--bs-btn-warning-bg) h s -webkit-calc(l - 12));
   background-color: hsl(from var(--bs-btn-warning-bg) h s calc(l - 12));
   background-position: 0 -15px;
 }
 .btn-warning:active,
 .btn-warning.active {
-  background-color: hsl(from var(--bs-btn-warning-bg) h s -webkit-calc(l - 12));
   background-color: hsl(from var(--bs-btn-warning-bg) h s calc(l - 12));
-  border-color: hsl(from var(--bs-btn-warning-bg) h s -webkit-calc(l - 14));
   border-color: hsl(from var(--bs-btn-warning-bg) h s calc(l - 14));
 }
 .btn-warning.disabled,
@@ -279,30 +237,22 @@ fieldset[disabled] .btn-warning:active,
 .btn-warning.disabled.active,
 .btn-warning[disabled].active,
 fieldset[disabled] .btn-warning.active {
-  background-color: hsl(from var(--bs-btn-warning-bg) h s -webkit-calc(l - 12));
   background-color: hsl(from var(--bs-btn-warning-bg) h s calc(l - 12));
   background-image: none;
 }
 .btn-danger {
-  background-image: -webkit-linear-gradient(top, var(--bs-btn-danger-bg) 0%, hsl(from var(--bs-btn-danger-bg) h s -webkit-calc(l - 12)) 100%);
-  background-image: -webkit-gradient(linear, left top, left bottom, from(var(--bs-btn-danger-bg)), to(hsl(from var(--bs-btn-danger-bg) h s calc(l - 12))));
-  background-image: -o-linear-gradient(top, var(--bs-btn-danger-bg) 0%, hsl(from var(--bs-btn-danger-bg) h s calc(l - 12)) 100%);
   background-image: linear-gradient(to bottom, var(--bs-btn-danger-bg) 0%, hsl(from var(--bs-btn-danger-bg) h s calc(l - 12)) 100%);
   background-repeat: repeat-x;
-  border-color: hsl(from var(--bs-btn-danger-bg) h s -webkit-calc(l - 14));
   border-color: hsl(from var(--bs-btn-danger-bg) h s calc(l - 14));
 }
 .btn-danger:hover,
 .btn-danger:focus {
-  background-color: hsl(from var(--bs-btn-danger-bg) h s -webkit-calc(l - 12));
   background-color: hsl(from var(--bs-btn-danger-bg) h s calc(l - 12));
   background-position: 0 -15px;
 }
 .btn-danger:active,
 .btn-danger.active {
-  background-color: hsl(from var(--bs-btn-danger-bg) h s -webkit-calc(l - 12));
   background-color: hsl(from var(--bs-btn-danger-bg) h s calc(l - 12));
-  border-color: hsl(from var(--bs-btn-danger-bg) h s -webkit-calc(l - 14));
   border-color: hsl(from var(--bs-btn-danger-bg) h s calc(l - 14));
 }
 .btn-danger.disabled,
@@ -323,54 +273,36 @@ fieldset[disabled] .btn-danger:active,
 .btn-danger.disabled.active,
 .btn-danger[disabled].active,
 fieldset[disabled] .btn-danger.active {
-  background-color: hsl(from var(--bs-btn-danger-bg) h s -webkit-calc(l - 12));
   background-color: hsl(from var(--bs-btn-danger-bg) h s calc(l - 12));
   background-image: none;
 }
 .thumbnail,
 .img-thumbnail {
-  -webkit-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.075);
   box-shadow: 0 1px 2px rgba(0, 0, 0, 0.075);
 }
 .dropdown-menu > li > a:hover,
 .dropdown-menu > li > a:focus {
-  background-image: -webkit-linear-gradient(top, var(--bs-dropdown-link-hover-bg) 0%, hsl(from var(--bs-dropdown-link-hover-bg) h s -webkit-calc(- 5)) 100%);
-  background-image: -webkit-gradient(linear, left top, left bottom, from(var(--bs-dropdown-link-hover-bg)), to(hsl(from var(--bs-dropdown-link-hover-bg) h s calc(- 5))));
-  background-image: -o-linear-gradient(top, var(--bs-dropdown-link-hover-bg) 0%, hsl(from var(--bs-dropdown-link-hover-bg) h s calc(- 5)) 100%);
   background-image: linear-gradient(to bottom, var(--bs-dropdown-link-hover-bg) 0%, hsl(from var(--bs-dropdown-link-hover-bg) h s calc(- 5)) 100%);
   background-repeat: repeat-x;
-  background-color: hsl(from var(--bs-dropdown-link-hover-bg) h s -webkit-calc(l - 5));
   background-color: hsl(from var(--bs-dropdown-link-hover-bg) h s calc(l - 5));
 }
 .dropdown-menu > .active > a,
 .dropdown-menu > .active > a:hover,
 .dropdown-menu > .active > a:focus {
-  background-image: -webkit-linear-gradient(top, var(--bs-dropdown-link-active-bg) 0%, hsl(from var(--bs-dropdown-link-active-bg) h s -webkit-calc(- 5)) 100%);
-  background-image: -webkit-gradient(linear, left top, left bottom, from(var(--bs-dropdown-link-active-bg)), to(hsl(from var(--bs-dropdown-link-active-bg) h s calc(- 5))));
-  background-image: -o-linear-gradient(top, var(--bs-dropdown-link-active-bg) 0%, hsl(from var(--bs-dropdown-link-active-bg) h s calc(- 5)) 100%);
   background-image: linear-gradient(to bottom, var(--bs-dropdown-link-active-bg) 0%, hsl(from var(--bs-dropdown-link-active-bg) h s calc(- 5)) 100%);
   background-repeat: repeat-x;
-  background-color: hsl(from var(--bs-dropdown-link-active-bg) h s -webkit-calc(l - 5));
   background-color: hsl(from var(--bs-dropdown-link-active-bg) h s calc(l - 5));
 }
 .navbar-default {
-  background-image: -webkit-linear-gradient(top, hsl(from var(--bs-navbar-default-bg) h s -webkit-calc(l + 10)) 0%, var(--bs-navbar-default-bg) 100%);
-  background-image: -webkit-gradient(linear, left top, left bottom, from(hsl(from var(--bs-navbar-default-bg) h s calc(l + 10))), to(var(--bs-navbar-default-bg)));
-  background-image: -o-linear-gradient(top, hsl(from var(--bs-navbar-default-bg) h s calc(l + 10)) 0%, var(--bs-navbar-default-bg) 100%);
   background-image: linear-gradient(to bottom, hsl(from var(--bs-navbar-default-bg) h s calc(l + 10)) 0%, var(--bs-navbar-default-bg) 100%);
   background-repeat: repeat-x;
   border-radius: var(--bs-navbar-border-radius);
-  -webkit-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.15), 0 1px 5px rgba(0, 0, 0, 0.075);
   box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.15), 0 1px 5px rgba(0, 0, 0, 0.075);
 }
 .navbar-default .navbar-nav > .open > a,
 .navbar-default .navbar-nav > .active > a {
-  background-image: -webkit-linear-gradient(top, hsl(from var(--bs-navbar-default-link-active-bg) h s -webkit-calc(l - 5)) 0%, hsl(from var(--bs-navbar-default-link-active-bg) h s -webkit-calc(l - 2)) 100%);
-  background-image: -webkit-gradient(linear, left top, left bottom, from(hsl(from var(--bs-navbar-default-link-active-bg) h s calc(l - 5))), to(hsl(from var(--bs-navbar-default-link-active-bg) h s calc(l - 2))));
-  background-image: -o-linear-gradient(top, hsl(from var(--bs-navbar-default-link-active-bg) h s calc(l - 5)) 0%, hsl(from var(--bs-navbar-default-link-active-bg) h s calc(l - 2)) 100%);
   background-image: linear-gradient(to bottom, hsl(from var(--bs-navbar-default-link-active-bg) h s calc(l - 5)) 0%, hsl(from var(--bs-navbar-default-link-active-bg) h s calc(l - 2)) 100%);
   background-repeat: repeat-x;
-  -webkit-box-shadow: inset 0 3px 9px rgba(0, 0, 0, 0.075);
   box-shadow: inset 0 3px 9px rgba(0, 0, 0, 0.075);
 }
 .navbar-brand,
@@ -378,21 +310,14 @@ fieldset[disabled] .btn-danger.active {
   text-shadow: 0 1px 0 rgba(255, 255, 255, 0.25);
 }
 .navbar-inverse {
-  background-image: -webkit-linear-gradient(top, hsl(from var(--bs-navbar-inverse-bg) h s -webkit-calc(l + 10)) 0%, var(--bs-navbar-inverse-bg) 100%);
-  background-image: -webkit-gradient(linear, left top, left bottom, from(hsl(from var(--bs-navbar-inverse-bg) h s calc(l + 10))), to(var(--bs-navbar-inverse-bg)));
-  background-image: -o-linear-gradient(top, hsl(from var(--bs-navbar-inverse-bg) h s calc(l + 10)) 0%, var(--bs-navbar-inverse-bg) 100%);
   background-image: linear-gradient(to bottom, hsl(from var(--bs-navbar-inverse-bg) h s calc(l + 10)) 0%, var(--bs-navbar-inverse-bg) 100%);
   background-repeat: repeat-x;
   border-radius: var(--bs-navbar-border-radius);
 }
 .navbar-inverse .navbar-nav > .open > a,
 .navbar-inverse .navbar-nav > .active > a {
-  background-image: -webkit-linear-gradient(top, var(--bs-navbar-inverse-link-active-bg) 0%, hsl(from var(--bs-navbar-inverse-link-active-bg) h s -webkit-calc(l + 2.5)) 100%);
-  background-image: -webkit-gradient(linear, left top, left bottom, from(var(--bs-navbar-inverse-link-active-bg)), to(hsl(from var(--bs-navbar-inverse-link-active-bg) h s calc(l + 2.5))));
-  background-image: -o-linear-gradient(top, var(--bs-navbar-inverse-link-active-bg) 0%, hsl(from var(--bs-navbar-inverse-link-active-bg) h s calc(l + 2.5)) 100%);
   background-image: linear-gradient(to bottom, var(--bs-navbar-inverse-link-active-bg) 0%, hsl(from var(--bs-navbar-inverse-link-active-bg) h s calc(l + 2.5)) 100%);
   background-repeat: repeat-x;
-  -webkit-box-shadow: inset 0 3px 9px rgba(0, 0, 0, 0.25);
   box-shadow: inset 0 3px 9px rgba(0, 0, 0, 0.25);
 }
 .navbar-inverse .navbar-brand,
@@ -409,117 +334,71 @@ fieldset[disabled] .btn-danger.active {
   .navbar .navbar-nav .open .dropdown-menu > .active > a:hover,
   .navbar .navbar-nav .open .dropdown-menu > .active > a:focus {
     color: #fff;
-    background-image: -webkit-linear-gradient(top, var(--bs-dropdown-link-active-bg) 0%, hsl(from var(--bs-dropdown-link-active-bg) h s -webkit-calc(l - 5)) 100%);
-    background-image: -webkit-gradient(linear, left top, left bottom, from(var(--bs-dropdown-link-active-bg)), to(hsl(from var(--bs-dropdown-link-active-bg) h s calc(l - 5))));
-    background-image: -o-linear-gradient(top, var(--bs-dropdown-link-active-bg) 0%, hsl(from var(--bs-dropdown-link-active-bg) h s calc(l - 5)) 100%);
     background-image: linear-gradient(to bottom, var(--bs-dropdown-link-active-bg) 0%, hsl(from var(--bs-dropdown-link-active-bg) h s calc(l - 5)) 100%);
     background-repeat: repeat-x;
   }
 }
 .alert {
   text-shadow: 0 1px 0 rgba(255, 255, 255, 0.2);
-  -webkit-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.25), 0 1px 2px rgba(0, 0, 0, 0.05);
   box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.25), 0 1px 2px rgba(0, 0, 0, 0.05);
 }
 .alert-success {
-  background-image: -webkit-linear-gradient(top, var(--bs-alert-success-bg) 0%, hsl(from var(--bs-alert-success-bg) h s -webkit-calc(l - 7.5)) 100%);
-  background-image: -webkit-gradient(linear, left top, left bottom, from(var(--bs-alert-success-bg)), to(hsl(from var(--bs-alert-success-bg) h s calc(l - 7.5))));
-  background-image: -o-linear-gradient(top, var(--bs-alert-success-bg) 0%, hsl(from var(--bs-alert-success-bg) h s calc(l - 7.5)) 100%);
   background-image: linear-gradient(to bottom, var(--bs-alert-success-bg) 0%, hsl(from var(--bs-alert-success-bg) h s calc(l - 7.5)) 100%);
   background-repeat: repeat-x;
-  border-color: hsl(from var(--bs-alert-success-bg) h s -webkit-calc(l - 15));
   border-color: hsl(from var(--bs-alert-success-bg) h s calc(l - 15));
 }
 .alert-info {
-  background-image: -webkit-linear-gradient(top, var(--bs-alert-info-bg) 0%, hsl(from var(--bs-alert-info-bg) h s -webkit-calc(l - 7.5)) 100%);
-  background-image: -webkit-gradient(linear, left top, left bottom, from(var(--bs-alert-info-bg)), to(hsl(from var(--bs-alert-info-bg) h s calc(l - 7.5))));
-  background-image: -o-linear-gradient(top, var(--bs-alert-info-bg) 0%, hsl(from var(--bs-alert-info-bg) h s calc(l - 7.5)) 100%);
   background-image: linear-gradient(to bottom, var(--bs-alert-info-bg) 0%, hsl(from var(--bs-alert-info-bg) h s calc(l - 7.5)) 100%);
   background-repeat: repeat-x;
-  border-color: hsl(from var(--bs-alert-info-bg) h s -webkit-calc(l - 15));
   border-color: hsl(from var(--bs-alert-info-bg) h s calc(l - 15));
 }
 .alert-warning {
-  background-image: -webkit-linear-gradient(top, var(--bs-alert-warning-bg) 0%, hsl(from var(--bs-alert-warning-bg) h s -webkit-calc(l - 7.5)) 100%);
-  background-image: -webkit-gradient(linear, left top, left bottom, from(var(--bs-alert-warning-bg)), to(hsl(from var(--bs-alert-warning-bg) h s calc(l - 7.5))));
-  background-image: -o-linear-gradient(top, var(--bs-alert-warning-bg) 0%, hsl(from var(--bs-alert-warning-bg) h s calc(l - 7.5)) 100%);
   background-image: linear-gradient(to bottom, var(--bs-alert-warning-bg) 0%, hsl(from var(--bs-alert-warning-bg) h s calc(l - 7.5)) 100%);
   background-repeat: repeat-x;
-  border-color: hsl(from var(--bs-alert-warning-bg) h s -webkit-calc(l - 15));
   border-color: hsl(from var(--bs-alert-warning-bg) h s calc(l - 15));
 }
 .alert-danger {
-  background-image: -webkit-linear-gradient(top, var(--bs-alert-danger-bg) 0%, hsl(from var(--bs-alert-danger-bg) h s -webkit-calc(l - 7.5)) 100%);
-  background-image: -webkit-gradient(linear, left top, left bottom, from(var(--bs-alert-danger-bg)), to(hsl(from var(--bs-alert-danger-bg) h s calc(l - 7.5))));
-  background-image: -o-linear-gradient(top, var(--bs-alert-danger-bg) 0%, hsl(from var(--bs-alert-danger-bg) h s calc(l - 7.5)) 100%);
   background-image: linear-gradient(to bottom, var(--bs-alert-danger-bg) 0%, hsl(from var(--bs-alert-danger-bg) h s calc(l - 7.5)) 100%);
   background-repeat: repeat-x;
-  border-color: hsl(from var(--bs-alert-danger-bg) h s -webkit-calc(l - 15));
   border-color: hsl(from var(--bs-alert-danger-bg) h s calc(l - 15));
 }
 .progress {
-  background-image: -webkit-linear-gradient(top, hsl(from var(--bs-progress-bg) h s -webkit-calc(l - 4)) 0%, var(--bs-progress-bg) 100%);
-  background-image: -webkit-gradient(linear, left top, left bottom, from(hsl(from var(--bs-progress-bg) h s calc(l - 4))), to(var(--bs-progress-bg)));
-  background-image: -o-linear-gradient(top, hsl(from var(--bs-progress-bg) h s calc(l - 4)) 0%, var(--bs-progress-bg) 100%);
   background-image: linear-gradient(to bottom, hsl(from var(--bs-progress-bg) h s calc(l - 4)) 0%, var(--bs-progress-bg) 100%);
   background-repeat: repeat-x;
 }
 .progress-bar {
-  background-image: -webkit-linear-gradient(top, var(--bs-progress-bar-bg) 0%, hsl(from var(--bs-progress-bar-bg) h s -webkit-calc(l - 10)) 100%);
-  background-image: -webkit-gradient(linear, left top, left bottom, from(var(--bs-progress-bar-bg)), to(hsl(from var(--bs-progress-bar-bg) h s calc(l - 10))));
-  background-image: -o-linear-gradient(top, var(--bs-progress-bar-bg) 0%, hsl(from var(--bs-progress-bar-bg) h s calc(l - 10)) 100%);
   background-image: linear-gradient(to bottom, var(--bs-progress-bar-bg) 0%, hsl(from var(--bs-progress-bar-bg) h s calc(l - 10)) 100%);
   background-repeat: repeat-x;
 }
 .progress-bar-success {
-  background-image: -webkit-linear-gradient(top, var(--bs-progress-bar-success-bg) 0%, hsl(from var(--bs-progress-bar-success-bg) h s -webkit-calc(l - 10)) 100%);
-  background-image: -webkit-gradient(linear, left top, left bottom, from(var(--bs-progress-bar-success-bg)), to(hsl(from var(--bs-progress-bar-success-bg) h s calc(l - 10))));
-  background-image: -o-linear-gradient(top, var(--bs-progress-bar-success-bg) 0%, hsl(from var(--bs-progress-bar-success-bg) h s calc(l - 10)) 100%);
   background-image: linear-gradient(to bottom, var(--bs-progress-bar-success-bg) 0%, hsl(from var(--bs-progress-bar-success-bg) h s calc(l - 10)) 100%);
   background-repeat: repeat-x;
 }
 .progress-bar-info {
-  background-image: -webkit-linear-gradient(top, var(--bs-progress-bar-info-bg) 0%, hsl(from var(--bs-progress-bar-info-bg) h s -webkit-calc(l - 10)) 100%);
-  background-image: -webkit-gradient(linear, left top, left bottom, from(var(--bs-progress-bar-info-bg)), to(hsl(from var(--bs-progress-bar-info-bg) h s calc(l - 10))));
-  background-image: -o-linear-gradient(top, var(--bs-progress-bar-info-bg) 0%, hsl(from var(--bs-progress-bar-info-bg) h s calc(l - 10)) 100%);
   background-image: linear-gradient(to bottom, var(--bs-progress-bar-info-bg) 0%, hsl(from var(--bs-progress-bar-info-bg) h s calc(l - 10)) 100%);
   background-repeat: repeat-x;
 }
 .progress-bar-warning {
-  background-image: -webkit-linear-gradient(top, var(--bs-progress-bar-warning-bg) 0%, hsl(from var(--bs-progress-bar-warning-bg) h s -webkit-calc(l - 10)) 100%);
-  background-image: -webkit-gradient(linear, left top, left bottom, from(var(--bs-progress-bar-warning-bg)), to(hsl(from var(--bs-progress-bar-warning-bg) h s calc(l - 10))));
-  background-image: -o-linear-gradient(top, var(--bs-progress-bar-warning-bg) 0%, hsl(from var(--bs-progress-bar-warning-bg) h s calc(l - 10)) 100%);
   background-image: linear-gradient(to bottom, var(--bs-progress-bar-warning-bg) 0%, hsl(from var(--bs-progress-bar-warning-bg) h s calc(l - 10)) 100%);
   background-repeat: repeat-x;
 }
 .progress-bar-danger {
-  background-image: -webkit-linear-gradient(top, var(--bs-progress-bar-danger-bg) 0%, hsl(from var(--bs-progress-bar-danger-bg) h s -webkit-calc(l - 10)) 100%);
-  background-image: -webkit-gradient(linear, left top, left bottom, from(var(--bs-progress-bar-danger-bg)), to(hsl(from var(--bs-progress-bar-danger-bg) h s calc(l - 10))));
-  background-image: -o-linear-gradient(top, var(--bs-progress-bar-danger-bg) 0%, hsl(from var(--bs-progress-bar-danger-bg) h s calc(l - 10)) 100%);
   background-image: linear-gradient(to bottom, var(--bs-progress-bar-danger-bg) 0%, hsl(from var(--bs-progress-bar-danger-bg) h s calc(l - 10)) 100%);
   background-repeat: repeat-x;
 }
 .progress-bar-striped {
-  background-image: -webkit-linear-gradient(45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);
-  background-image: -o-linear-gradient(45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);
   background-image: linear-gradient(45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);
 }
 .list-group {
   border-radius: var(--bs-border-radius-base);
-  -webkit-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.075);
   box-shadow: 0 1px 2px rgba(0, 0, 0, 0.075);
 }
 .list-group-item.active,
 .list-group-item.active:hover,
 .list-group-item.active:focus {
-  text-shadow: 0 -1px 0 hsl(from var(--bs-list-group-active-bg) h s -webkit-calc(l - 10));
   text-shadow: 0 -1px 0 hsl(from var(--bs-list-group-active-bg) h s calc(l - 10));
-  background-image: -webkit-linear-gradient(top, var(--bs-list-group-active-bg) 0%, hsl(from var(--bs-list-group-active-bg) h s -webkit-calc(l - 7.5)) 100%);
-  background-image: -webkit-gradient(linear, left top, left bottom, from(var(--bs-list-group-active-bg)), to(hsl(from var(--bs-list-group-active-bg) h s calc(l - 7.5))));
-  background-image: -o-linear-gradient(top, var(--bs-list-group-active-bg) 0%, hsl(from var(--bs-list-group-active-bg) h s calc(l - 7.5)) 100%);
   background-image: linear-gradient(to bottom, var(--bs-list-group-active-bg) 0%, hsl(from var(--bs-list-group-active-bg) h s calc(l - 7.5)) 100%);
   background-repeat: repeat-x;
-  border-color: hsl(from var(--bs-list-group-active-border) h s -webkit-calc(l - 7.5));
   border-color: hsl(from var(--bs-list-group-active-border) h s calc(l - 7.5));
 }
 .list-group-item.active .badge,
@@ -528,60 +407,36 @@ fieldset[disabled] .btn-danger.active {
   text-shadow: none;
 }
 .panel {
-  -webkit-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
   box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
 }
 .panel-default > .panel-heading {
-  background-image: -webkit-linear-gradient(top, var(--bs-panel-default-heading-bg) 0%, hsl(from var(--bs-panel-default-heading-bg) h s -webkit-calc(l - 5)) 100%);
-  background-image: -webkit-gradient(linear, left top, left bottom, from(var(--bs-panel-default-heading-bg)), to(hsl(from var(--bs-panel-default-heading-bg) h s calc(l - 5))));
-  background-image: -o-linear-gradient(top, var(--bs-panel-default-heading-bg) 0%, hsl(from var(--bs-panel-default-heading-bg) h s calc(l - 5)) 100%);
   background-image: linear-gradient(to bottom, var(--bs-panel-default-heading-bg) 0%, hsl(from var(--bs-panel-default-heading-bg) h s calc(l - 5)) 100%);
   background-repeat: repeat-x;
 }
 .panel-primary > .panel-heading {
-  background-image: -webkit-linear-gradient(top, var(--bs-panel-primary-heading-bg) 0%, hsl(from var(--bs-panel-primary-heading-bg) h s -webkit-calc(l - 5)) 100%);
-  background-image: -webkit-gradient(linear, left top, left bottom, from(var(--bs-panel-primary-heading-bg)), to(hsl(from var(--bs-panel-primary-heading-bg) h s calc(l - 5))));
-  background-image: -o-linear-gradient(top, var(--bs-panel-primary-heading-bg) 0%, hsl(from var(--bs-panel-primary-heading-bg) h s calc(l - 5)) 100%);
   background-image: linear-gradient(to bottom, var(--bs-panel-primary-heading-bg) 0%, hsl(from var(--bs-panel-primary-heading-bg) h s calc(l - 5)) 100%);
   background-repeat: repeat-x;
 }
 .panel-success > .panel-heading {
-  background-image: -webkit-linear-gradient(top, var(--bs-panel-success-heading-bg) 0%, hsl(from var(--bs-panel-success-heading-bg) h s -webkit-calc(l - 5)) 100%);
-  background-image: -webkit-gradient(linear, left top, left bottom, from(var(--bs-panel-success-heading-bg)), to(hsl(from var(--bs-panel-success-heading-bg) h s calc(l - 5))));
-  background-image: -o-linear-gradient(top, var(--bs-panel-success-heading-bg) 0%, hsl(from var(--bs-panel-success-heading-bg) h s calc(l - 5)) 100%);
   background-image: linear-gradient(to bottom, var(--bs-panel-success-heading-bg) 0%, hsl(from var(--bs-panel-success-heading-bg) h s calc(l - 5)) 100%);
   background-repeat: repeat-x;
 }
 .panel-info > .panel-heading {
-  background-image: -webkit-linear-gradient(top, var(--bs-panel-info-heading-bg) 0%, hsl(from var(--bs-panel-info-heading-bg) h s -webkit-calc(l - 5)) 100%);
-  background-image: -webkit-gradient(linear, left top, left bottom, from(var(--bs-panel-info-heading-bg)), to(hsl(from var(--bs-panel-info-heading-bg) h s calc(l - 5))));
-  background-image: -o-linear-gradient(top, var(--bs-panel-info-heading-bg) 0%, hsl(from var(--bs-panel-info-heading-bg) h s calc(l - 5)) 100%);
   background-image: linear-gradient(to bottom, var(--bs-panel-info-heading-bg) 0%, hsl(from var(--bs-panel-info-heading-bg) h s calc(l - 5)) 100%);
   background-repeat: repeat-x;
 }
 .panel-warning > .panel-heading {
-  background-image: -webkit-linear-gradient(top, var(--bs-panel-warning-heading-bg) 0%, hsl(from var(--bs-panel-warning-heading-bg) h s -webkit-calc(l - 5)) 100%);
-  background-image: -webkit-gradient(linear, left top, left bottom, from(var(--bs-panel-warning-heading-bg)), to(hsl(from var(--bs-panel-warning-heading-bg) h s calc(l - 5))));
-  background-image: -o-linear-gradient(top, var(--bs-panel-warning-heading-bg) 0%, hsl(from var(--bs-panel-warning-heading-bg) h s calc(l - 5)) 100%);
   background-image: linear-gradient(to bottom, var(--bs-panel-warning-heading-bg) 0%, hsl(from var(--bs-panel-warning-heading-bg) h s calc(l - 5)) 100%);
   background-repeat: repeat-x;
 }
 .panel-danger > .panel-heading {
-  background-image: -webkit-linear-gradient(top, var(--bs-panel-danger-heading-bg) 0%, hsl(from var(--bs-panel-danger-heading-bg) h s -webkit-calc(l - 5)) 100%);
-  background-image: -webkit-gradient(linear, left top, left bottom, from(var(--bs-panel-danger-heading-bg)), to(hsl(from var(--bs-panel-danger-heading-bg) h s calc(l - 5))));
-  background-image: -o-linear-gradient(top, var(--bs-panel-danger-heading-bg) 0%, hsl(from var(--bs-panel-danger-heading-bg) h s calc(l - 5)) 100%);
   background-image: linear-gradient(to bottom, var(--bs-panel-danger-heading-bg) 0%, hsl(from var(--bs-panel-danger-heading-bg) h s calc(l - 5)) 100%);
   background-repeat: repeat-x;
 }
 .well {
-  background-image: -webkit-linear-gradient(top, hsl(from var(--bs-well-bg) h s -webkit-calc(l - 5)) 0%, var(--bs-well-bg) 100%);
-  background-image: -webkit-gradient(linear, left top, left bottom, from(hsl(from var(--bs-well-bg) h s calc(l - 5))), to(var(--bs-well-bg)));
-  background-image: -o-linear-gradient(top, hsl(from var(--bs-well-bg) h s calc(l - 5)) 0%, var(--bs-well-bg) 100%);
   background-image: linear-gradient(to bottom, hsl(from var(--bs-well-bg) h s calc(l - 5)) 0%, var(--bs-well-bg) 100%);
   background-repeat: repeat-x;
-  border-color: hsl(from var(--bs-well-bg) h s -webkit-calc(l - 10));
   border-color: hsl(from var(--bs-well-bg) h s calc(l - 10));
-  -webkit-box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.05), 0 1px 0 rgba(255, 255, 255, 0.1);
   box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.05), 0 1px 0 rgba(255, 255, 255, 0.1);
 }
 /*# sourceMappingURL=bootstrap-theme.css.map */
