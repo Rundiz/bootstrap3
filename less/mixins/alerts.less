@@ -6,10 +6,16 @@
   border-color: @border;
 
   hr {
-    border-top-color: hsl(from @border h s calc(l - 5));// browsers supported ( https://caniuse.com/css-relative-colors )
+    border-top-color: @border;
+    @supports (color: hsl(from #000 h s calc(l - 1))) {
+      border-top-color: hsl(from @border h s calc(l - 5));// browsers supported ( https://caniuse.com/css-relative-colors )
+    }
   }
 
   .alert-link {
-    color: hsl(from @text-color h s calc(l - 10));
+    color: @text-color;
+    @supports (color: hsl(from #000 h s calc(l - 1))) {
+      color: hsl(from @text-color h s calc(l - 10));
+    }
   }
 }

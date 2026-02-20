@@ -4,6 +4,9 @@
   background-color: @color;
   a&:hover,
   a&:focus {
-    background-color: hsl(from @color h s calc(l - 10));
+    background-color: @color;
+    @supports(color: hsl(from #000 h s calc(l - 1))) {
+      background-color: hsl(from @color h s calc(l - 10));
+    }
   }
 }
