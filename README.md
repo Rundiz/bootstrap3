@@ -87,10 +87,14 @@ Bootstrap's documentation, included in this repo in the root directory, is built
 4. Open `http://localhost:9001` in your browser, and voilà.
 
 #### Use Docker (recommended)
-1. Install [Docker](https://www.docker.com/) and then install [Docker image named **jekyll**](https://hub.docker.com/r/jekyll/jekyll/) via command `docker pull jekyll/jekyll:3.8.6`.
-2. From the root `/bootstrap` directory, run Docker image via command `docker run --rm -it --volume="%cd%:/srv/jekyll" --publish 9001:9001  jekyll/jekyll:3.8.6 jekyll serve`. You may replace `%cd%` to `$PWD` on Linux.  
-   Or you may use command `docker run --rm -it --volume="%cd%:/srv/jekyll" --publish 9001:9001 --publish 35729:35729  jekyll/jekyll:3.8.6 jekyll serve --watch --force_polling --livereload` to make it auto regenerate the document and live reload on Windows.
-3. Open `http://localhost:9001/docs/3.4/` in your browser.
+1. Install [Docker](https://www.docker.com/).
+2. From the root `/bootstrap` directory, run command `docker build -t mynode:latest .` to install **Dockerfile**.
+3. Run command `docker volume create docker_ruby_bundle` to create volume.
+4. Run command `docker run --rm -it -v "%CD%:/app" -v docker_ruby_bundle:/bundle -w /app mynode:latest sh -lc "gem install -N bundler -v 2.6.9 -i /bundle && bundle _2.6.9_ install"` to install Ruby gems once. You may replace `%CD%` to `$PWD` on Linux.  
+    If you see _cannot load such file -- webrick_, run this command once `docker run --rm -it -v "%CD%:/app" -v docker_ruby_bundle:/bundle -w /app mynode:latest sh -lc "bundle add webrick"`.
+5. From the root `/bootstrap` directory, run command `docker run --rm -it -v "%CD%:/app" -v docker_ruby_bundle:/bundle -w /app -p 9001:9001 mynode:latest bundle exec jekyll serve --host 0.0.0.0 --port 9001`  
+    Or you may use command `docker run --rm -it -v "%CD%:/app" -v docker_ruby_bundle:/bundle -w /app -p 9001:9001 -p 35729:35729 mynode:latest bundle exec jekyll serve --host 0.0.0.0 --port 9001 --watch --force_polling --livereload --livereload-port 35729` to make it auto regenerate the document and live reload on Windows.
+6. Open `http://localhost:9001/docs/3.4/` in your browser.
 
 Learn more about using Jekyll by reading its [documentation](https://jekyllrb.com/docs/).
 
@@ -110,10 +114,10 @@ Editor preferences are available in the [editor config](https://github.com/rundi
 Recommend to use Docker to run Node package commands (`npm run ..`).
 
 1. Install [Docker](https://www.docker.com/).
-2. From the root `/bootstrap` directory, run command `docker build -t mynode:latest .` to install **Dockerfile**.
-3. Run commands `docker volume create docker_node_modules`, `docker volume create docker_ruby_bundle` to create volumes.
-4. Run command `docker run --rm -it -v "%CD%:/app" -v docker_node_modules:/app/node_modules -w /app mynode:latest npm ci` to clean install Node packages once.
-5. Run command `docker run --rm -it -v "%CD%:/app" -v docker_ruby_bundle:/bundle -w /app mynode:latest bundle install` to install Ruby gems once.
+2. From the root `/bootstrap` directory, run command `docker build -t mynode:latest .` to install **Dockerfile**. (If you already did from step Running documentation locally then you can skip this step.)
+3. Run commands `docker volume create docker_node_modules`, `docker volume create docker_ruby_bundle` to create volumes. (If some volume is already created then you can skip it.)
+4. Run command `docker run --rm -it -v "%CD%:/app" -v docker_node_modules:/app/node_modules -w /app mynode:latest npm ci` to clean install Node packages once. You may replace `%CD%` to `$PWD` on Linux.
+5. Run command `docker run --rm -it -v "%CD%:/app" -v docker_ruby_bundle:/bundle -w /app mynode:latest bundle install` to install Ruby gems once. (If you already did from step Running documentation locally then you can skip this step.)
 6. And then you can run command in package.json `scripts`. For example: `docker run --rm -it -v "%CD%:/app" -v docker_node_modules:/app/node_modules -v docker_ruby_bundle:/bundle -w /app mynode:latest npm run release`.
 
 
