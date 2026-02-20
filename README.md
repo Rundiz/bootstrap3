@@ -120,6 +120,14 @@ Recommend to use Docker to run Node package commands (`npm run ..`).
 5. Run command `docker run --rm -it -v "%CD%:/app" -v docker_ruby_bundle:/bundle -w /app mynode:latest bundle install` to install Ruby gems once. (If you already did from step Running documentation locally then you can skip this step.)
 6. And then you can run command in package.json `scripts`. For example: `docker run --rm -it -v "%CD%:/app" -v docker_node_modules:/app/node_modules -v docker_ruby_bundle:/bundle -w /app mynode:latest npm run release`.
 
+#### To watch .less file change or compile files
+
+After you completed install step 1 to 5 above, you can use following commands.
+
+* Run command `docker run --rm -it -v "%CD%:/app" -v docker_node_modules:/app/node_modules -v docker_ruby_bundle:/bundle -w /app mynode:latest node_modules/grunt/bin/grunt watch:less` to watch .less file change. You need to use this command to work with **Running documentation locally** live reload.
+* Run command `docker run --rm -it -v "%CD%:/app" -v docker_node_modules:/app/node_modules -v docker_ruby_bundle:/bundle -w /app mynode:latest node_modules/grunt/bin/grunt dist-css` to build CSS files.
+* Run command `docker run --rm -it -v "%CD%:/app" -v docker_node_modules:/app/node_modules -v docker_ruby_bundle:/bundle -w /app mynode:latest node_modules/grunt/bin/grunt dist` to build full distribution task files (CSS, JS).
+
 
 ## Community
 
