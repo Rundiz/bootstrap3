@@ -27,7 +27,7 @@ There is no new or extra features than original Bootstrap 3 and no new feature r
 
 ## Limitations
 
-This repo. use CSS variable for example `--background-color: #fff;` and `background-color: var(--background-color);`. So, it does not supported Internet Explorer (IE). If you would like to use old browsers, please use original Bootstrap 3.
+This repo. uses CSS variables, for example `--background-color: #fff;` and `background-color: var(--background-color);`. So, it does not support Internet Explorer (IE). If you would like to use old browsers, please use original Bootstrap 3.
 
 
 ## Quick start
@@ -72,7 +72,7 @@ We provide compiled CSS and JS (`bootstrap.*`), as well as compiled and minified
 
 Have a bug or a feature request? Please first read the [issue guidelines](https://github.com/rundiz/bootstrap3/blob/v3-dev/CONTRIBUTING.md#using-the-issue-tracker) and search for existing and closed issues. If your problem or idea is not addressed yet, [please open a new issue](https://github.com/rundiz/bootstrap3/issues/new).
 
-Do not accept feature requests. This repository is for make Bootstrap 3 using modern functions, syntax to use with moder web browsers but keep original features of Bootstrap 3. No new feature requests.
+Do not accept feature requests. This repository is for makeing Bootstrap 3 using modern functions, and syntax to use with modern web browsers but keep the original features of Bootstrap 3. No new feature requests.
 
 ## Documentation
 
@@ -88,12 +88,12 @@ Bootstrap's documentation, included in this repo in the root directory, is built
 
 #### Use Docker (recommended)
 1. Install [Docker](https://www.docker.com/).
-2. From the root `/bootstrap` directory, run command `docker build -t mynode:latest .` to install **Dockerfile**.
-3. Run command `docker volume create docker_ruby_bundle` to create volume.
-4. Run command `docker run --rm -it -v "%CD%:/app" -v docker_ruby_bundle:/bundle -w /app mynode:latest sh -lc "gem install -N bundler -v 2.6.9 -i /bundle && bundle _2.6.9_ install"` to install Ruby gems once. You may replace `%CD%` to `$PWD` on Linux.  
+2. From the root `/bootstrap` directory, run the command `docker build -t mynode:latest .` to install **Dockerfile**.
+3. Run the command `docker volume create docker_ruby_bundle` to create a volume.
+4. Run the command `docker run --rm -it -v "%CD%:/app" -v docker_ruby_bundle:/bundle -w /app mynode:latest sh -lc "gem install -N bundler -v 2.6.9 -i /bundle && bundle _2.6.9_ install"` to install Ruby gems once. You may replace `%CD%` with `$PWD` on Linux.  
     If you see _cannot load such file -- webrick_, run this command once `docker run --rm -it -v "%CD%:/app" -v docker_ruby_bundle:/bundle -w /app mynode:latest sh -lc "bundle add webrick"`.
-5. From the root `/bootstrap` directory, run command `docker run --rm -it -v "%CD%:/app" -v docker_ruby_bundle:/bundle -w /app -p 9001:9001 mynode:latest bundle exec jekyll serve --host 0.0.0.0 --port 9001`  
-    Or you may use command `docker run --rm -it -v "%CD%:/app" -v docker_ruby_bundle:/bundle -w /app -p 9001:9001 -p 35729:35729 mynode:latest bundle exec jekyll serve --host 0.0.0.0 --port 9001 --watch --force_polling --livereload --livereload-port 35729` to make it auto regenerate the document and live reload on Windows.
+5. From the root `/bootstrap` directory, run the command `docker run --rm -it -v "%CD%:/app" -v docker_ruby_bundle:/bundle -w /app -p 9001:9001 mynode:latest bundle exec jekyll serve --host 0.0.0.0 --port 9001`  
+    Or you may use the command `docker run --rm -it -v "%CD%:/app" -v docker_ruby_bundle:/bundle -w /app -p 9001:9001 -p 35729:35729 mynode:latest bundle exec jekyll serve --host 0.0.0.0 --port 9001 --watch --force_polling --livereload --livereload-port 35729` to make it auto regenerate the document and live reload on Windows.
 6. Open `http://localhost:9001/docs/3.4/` in your browser.
 
 Learn more about using Jekyll by reading its [documentation](https://jekyllrb.com/docs/).
@@ -114,25 +114,25 @@ Editor preferences are available in the [editor config](https://github.com/rundi
 Recommend to use Docker to run Node package commands (`npm run ..`).
 
 1. Install [Docker](https://www.docker.com/).
-2. From the root `/bootstrap` directory, run command `docker build -t mynode:latest .` to install **Dockerfile**. (If you already did from step Running documentation locally then you can skip this step.)
+2. From the root `/bootstrap` directory, run the command `docker build -t mynode:latest .` to install **Dockerfile**. (If you already did from step Running documentation locally, then you can skip this step.)
 3. Run commands `docker volume create docker_node_modules`, `docker volume create docker_ruby_bundle` to create volumes. (If some volume is already created then you can skip it.)
-4. Run command `docker run --rm -it -v "%CD%:/app" -v docker_node_modules:/app/node_modules -w /app mynode:latest npm ci` to clean install Node packages once. You may replace `%CD%` to `$PWD` on Linux.
-5. Run command `docker run --rm -it -v "%CD%:/app" -v docker_ruby_bundle:/bundle -w /app mynode:latest bundle install` to install Ruby gems once. (If you already did from step Running documentation locally then you can skip this step.)
-6. And then you can run command in package.json `scripts`. For example: `docker run --rm -it -v "%CD%:/app" -v docker_node_modules:/app/node_modules -v docker_ruby_bundle:/bundle -w /app mynode:latest npm run release`.
+4. Run the command `docker run --rm -it -v "%CD%:/app" -v docker_node_modules:/app/node_modules -w /app mynode:latest npm ci` to clean install Node packages once. You may replace `%CD%` to `$PWD` on Linux.
+5. Run the command `docker run --rm -it -v "%CD%:/app" -v docker_ruby_bundle:/bundle -w /app mynode:latest bundle install` to install Ruby gems once. (If you already did from the step Running documentation locally, then you can skip this step.)
+6. And then you can run the command in package.json `scripts`. For example: `docker run --rm -it -v "%CD%:/app" -v docker_node_modules:/app/node_modules -v docker_ruby_bundle:/bundle -w /app mynode:latest npm run release`.
 
 #### To watch .less file change or compile files
 
-After you completed install step 1 to 5 above, you can use following commands.
+After you have completed installation steps 1 to 5 above, you can use the following commands.
 
-* Run command `docker run --rm -it -v "%CD%:/app" -v docker_node_modules:/app/node_modules -v docker_ruby_bundle:/bundle -w /app mynode:latest node_modules/grunt/bin/grunt watch:less` to watch .less file change. You need to use this command to work with **Running documentation locally** live reload.
-* Run command `docker run --rm -it -v "%CD%:/app" -v docker_node_modules:/app/node_modules -v docker_ruby_bundle:/bundle -w /app mynode:latest node_modules/grunt/bin/grunt dist-css` to build CSS files.
-* Run command `docker run --rm -it -v "%CD%:/app" -v docker_node_modules:/app/node_modules -v docker_ruby_bundle:/bundle -w /app mynode:latest node_modules/grunt/bin/grunt dist` to build full distribution task files (CSS, JS).
+* Run the command `docker run --rm -it -v "%CD%:/app" -v docker_node_modules:/app/node_modules -v docker_ruby_bundle:/bundle -w /app mynode:latest node_modules/grunt/bin/grunt watch:less` to watch .less file change. You need to use this command to work with **Running documentation locally** live reload.
+* Run the command `docker run --rm -it -v "%CD%:/app" -v docker_node_modules:/app/node_modules -v docker_ruby_bundle:/bundle -w /app mynode:latest node_modules/grunt/bin/grunt dist-css` to build CSS files.
+* Run the command `docker run --rm -it -v "%CD%:/app" -v docker_node_modules:/app/node_modules -v docker_ruby_bundle:/bundle -w /app mynode:latest node_modules/grunt/bin/grunt dist` to build full distribution task files (CSS, JS).
 
 #### Before commit, publish
 
-* Run package.json `change-version` if need.
-* Run package.json `test` if need.
-* Run package.json `release` to rebuild assets, generate release zip, update hash.
+* Run package.json `change-version` if needed.
+* Run package.json `test` if needed.
+* Run package.json `release` to rebuild assets, generate release zip, update the hash.
 * Then run `git add ...` and `git commit ...`.
 
 
