@@ -1720,35 +1720,65 @@ mark,
 }
 a.text-primary:hover,
 a.text-primary:focus {
-  color: hsl(from var(--bs-brand-primary) h s calc(l - 10));
+  color: var(--bs-brand-primary);
+}
+@supports (color: hsl(from #000 h s calc(l - 1))) {
+  a.text-primary:hover,
+  a.text-primary:focus {
+    color: hsl(from var(--bs-brand-primary) h s calc(l - 10));
+  }
 }
 .text-success {
   color: var(--bs-state-success-text);
 }
 a.text-success:hover,
 a.text-success:focus {
-  color: hsl(from var(--bs-state-success-text) h s calc(l - 10));
+  color: var(--bs-state-success-text);
+}
+@supports (color: hsl(from #000 h s calc(l - 1))) {
+  a.text-success:hover,
+  a.text-success:focus {
+    color: hsl(from var(--bs-state-success-text) h s calc(l - 10));
+  }
 }
 .text-info {
   color: var(--bs-state-info-text);
 }
 a.text-info:hover,
 a.text-info:focus {
-  color: hsl(from var(--bs-state-info-text) h s calc(l - 10));
+  color: var(--bs-state-info-text);
+}
+@supports (color: hsl(from #000 h s calc(l - 1))) {
+  a.text-info:hover,
+  a.text-info:focus {
+    color: hsl(from var(--bs-state-info-text) h s calc(l - 10));
+  }
 }
 .text-warning {
   color: var(--bs-state-warning-text);
 }
 a.text-warning:hover,
 a.text-warning:focus {
-  color: hsl(from var(--bs-state-warning-text) h s calc(l - 10));
+  color: var(--bs-state-warning-text);
+}
+@supports (color: hsl(from #000 h s calc(l - 1))) {
+  a.text-warning:hover,
+  a.text-warning:focus {
+    color: hsl(from var(--bs-state-warning-text) h s calc(l - 10));
+  }
 }
 .text-danger {
   color: var(--bs-state-danger-text);
 }
 a.text-danger:hover,
 a.text-danger:focus {
-  color: hsl(from var(--bs-state-danger-text) h s calc(l - 10));
+  color: var(--bs-state-danger-text);
+}
+@supports (color: hsl(from #000 h s calc(l - 1))) {
+  a.text-danger:hover,
+  a.text-danger:focus {
+    color: hsl(from var(--bs-state-danger-text) h s calc(l - 10));
+  }
 }
 .bg-primary {
   color: #fff;
@@ -1756,35 +1786,65 @@ a.text-danger:focus {
 }
 a.bg-primary:hover,
 a.bg-primary:focus {
-  background-color: hsl(from var(--bs-brand-primary) h s calc(l - 10));
+  background-color: var(--bs-brand-primary);
+}
+@supports (color: hsl(from #000 h s calc(l - 1))) {
+  a.bg-primary:hover,
+  a.bg-primary:focus {
+    background-color: hsl(from var(--bs-brand-primary) h s calc(l - 10));
+  }
 }
 .bg-success {
   background-color: var(--bs-state-success-bg);
 }
 a.bg-success:hover,
 a.bg-success:focus {
-  background-color: hsl(from var(--bs-state-success-bg) h s calc(l - 10));
+  background-color: var(--bs-state-success-bg);
+}
+@supports (color: hsl(from #000 h s calc(l - 1))) {
+  a.bg-success:hover,
+  a.bg-success:focus {
+    background-color: hsl(from var(--bs-state-success-bg) h s calc(l - 10));
+  }
 }
 .bg-info {
   background-color: var(--bs-state-info-bg);
 }
 a.bg-info:hover,
 a.bg-info:focus {
-  background-color: hsl(from var(--bs-state-info-bg) h s calc(l - 10));
+  background-color: var(--bs-state-info-bg);
+}
+@supports (color: hsl(from #000 h s calc(l - 1))) {
+  a.bg-info:hover,
+  a.bg-info:focus {
+    background-color: hsl(from var(--bs-state-info-bg) h s calc(l - 10));
+  }
 }
 .bg-warning {
   background-color: var(--bs-state-warning-bg);
 }
 a.bg-warning:hover,
 a.bg-warning:focus {
-  background-color: hsl(from var(--bs-state-warning-bg) h s calc(l - 10));
+  background-color: var(--bs-state-warning-bg);
+}
+@supports (color: hsl(from #000 h s calc(l - 1))) {
+  a.bg-warning:hover,
+  a.bg-warning:focus {
+    background-color: hsl(from var(--bs-state-warning-bg) h s calc(l - 10));
+  }
 }
 .bg-danger {
   background-color: var(--bs-state-danger-bg);
 }
 a.bg-danger:hover,
 a.bg-danger:focus {
-  background-color: hsl(from var(--bs-state-danger-bg) h s calc(l - 10));
+  background-color: var(--bs-state-danger-bg);
+}
+@supports (color: hsl(from #000 h s calc(l - 1))) {
+  a.bg-danger:hover,
+  a.bg-danger:focus {
+    background-color: hsl(from var(--bs-state-danger-bg) h s calc(l - 10));
+  }
 }
 .page-header {
   padding-bottom: calc((var(--bs-line-height-computed) / 2) - 1px);
@@ -2828,7 +2888,16 @@ th {
 .table-hover > tbody > tr.active:hover > td,
 .table-hover > tbody > tr:hover > .active,
 .table-hover > tbody > tr.active:hover > th {
-  background-color: hsl(from var(--bs-table-bg-active) h s calc(l - 5));
+  background-color: var(--bs-table-bg-active);
+}
+@supports (color: hsl(from #000 h s calc(l - 1))) {
+  .table-hover > tbody > tr > td.active:hover,
+  .table-hover > tbody > tr > th.active:hover,
+  .table-hover > tbody > tr.active:hover > td,
+  .table-hover > tbody > tr:hover > .active,
+  .table-hover > tbody > tr.active:hover > th {
+    background-color: hsl(from var(--bs-table-bg-active) h s calc(l - 5));
+  }
 }
 .table > thead > tr > td.success,
 .table > tbody > tr > td.success,
@@ -2849,7 +2918,16 @@ th {
 .table-hover > tbody > tr.success:hover > td,
 .table-hover > tbody > tr:hover > .success,
 .table-hover > tbody > tr.success:hover > th {
-  background-color: hsl(from var(--bs-state-success-bg) h s calc(l - 5));
+  background-color: var(--bs-state-success-bg);
+}
+@supports (color: hsl(from #000 h s calc(l - 1))) {
+  .table-hover > tbody > tr > td.success:hover,
+  .table-hover > tbody > tr > th.success:hover,
+  .table-hover > tbody > tr.success:hover > td,
+  .table-hover > tbody > tr:hover > .success,
+  .table-hover > tbody > tr.success:hover > th {
+    background-color: hsl(from var(--bs-state-success-bg) h s calc(l - 5));
+  }
 }
 .table > thead > tr > td.info,
 .table > tbody > tr > td.info,
@@ -2870,7 +2948,16 @@ th {
 .table-hover > tbody > tr.info:hover > td,
 .table-hover > tbody > tr:hover > .info,
 .table-hover > tbody > tr.info:hover > th {
-  background-color: hsl(from var(--bs-state-info-bg) h s calc(l - 5));
+  background-color: var(--bs-state-info-bg);
+}
+@supports (color: hsl(from #000 h s calc(l - 1))) {
+  .table-hover > tbody > tr > td.info:hover,
+  .table-hover > tbody > tr > th.info:hover,
+  .table-hover > tbody > tr.info:hover > td,
+  .table-hover > tbody > tr:hover > .info,
+  .table-hover > tbody > tr.info:hover > th {
+    background-color: hsl(from var(--bs-state-info-bg) h s calc(l - 5));
+  }
 }
 .table > thead > tr > td.warning,
 .table > tbody > tr > td.warning,
@@ -2891,7 +2978,16 @@ th {
 .table-hover > tbody > tr.warning:hover > td,
 .table-hover > tbody > tr:hover > .warning,
 .table-hover > tbody > tr.warning:hover > th {
-  background-color: hsl(from var(--bs-state-warning-bg) h s calc(l - 5));
+  background-color: var(--bs-state-warning-bg);
+}
+@supports (color: hsl(from #000 h s calc(l - 1))) {
+  .table-hover > tbody > tr > td.warning:hover,
+  .table-hover > tbody > tr > th.warning:hover,
+  .table-hover > tbody > tr.warning:hover > td,
+  .table-hover > tbody > tr:hover > .warning,
+  .table-hover > tbody > tr.warning:hover > th {
+    background-color: hsl(from var(--bs-state-warning-bg) h s calc(l - 5));
+  }
 }
 .table > thead > tr > td.danger,
 .table > tbody > tr > td.danger,
@@ -2912,7 +3008,16 @@ th {
 .table-hover > tbody > tr.danger:hover > td,
 .table-hover > tbody > tr:hover > .danger,
 .table-hover > tbody > tr.danger:hover > th {
-  background-color: hsl(from var(--bs-state-danger-bg) h s calc(l - 5));
+  background-color: var(--bs-state-danger-bg);
+}
+@supports (color: hsl(from #000 h s calc(l - 1))) {
+  .table-hover > tbody > tr > td.danger:hover,
+  .table-hover > tbody > tr > th.danger:hover,
+  .table-hover > tbody > tr.danger:hover > td,
+  .table-hover > tbody > tr:hover > .danger,
+  .table-hover > tbody > tr.danger:hover > th {
+    background-color: hsl(from var(--bs-state-danger-bg) h s calc(l - 5));
+  }
 }
 .table-responsive {
   min-height: 0.01%;
@@ -3522,7 +3627,7 @@ fieldset[disabled] a.btn {
 .btn-default.focus {
   color: var(--bs-btn-default-color);
   background-color: hsl(from var(--bs-btn-default-bg) h s calc(l - 10));
-  border-color: hsl(from var(--bs-btn-default-border), 25%);
+  border-color: hsl(from var(--bs-btn-default-border) h s calc(l - 25));
 }
 .btn-default:hover {
   color: var(--bs-btn-default-color);
@@ -3575,7 +3680,7 @@ fieldset[disabled] .btn-default.focus {
 .btn-primary.focus {
   color: var(--bs-btn-primary-color);
   background-color: hsl(from var(--bs-btn-primary-bg) h s calc(l - 10));
-  border-color: hsl(from var(--bs-btn-primary-border), 25%);
+  border-color: hsl(from var(--bs-btn-primary-border) h s calc(l - 25));
 }
 .btn-primary:hover {
   color: var(--bs-btn-primary-color);
@@ -3628,7 +3733,7 @@ fieldset[disabled] .btn-primary.focus {
 .btn-success.focus {
   color: var(--bs-btn-success-color);
   background-color: hsl(from var(--bs-btn-success-bg) h s calc(l - 10));
-  border-color: hsl(from var(--bs-btn-success-border), 25%);
+  border-color: hsl(from var(--bs-btn-success-border) h s calc(l - 25));
 }
 .btn-success:hover {
   color: var(--bs-btn-success-color);
@@ -3681,7 +3786,7 @@ fieldset[disabled] .btn-success.focus {
 .btn-info.focus {
   color: var(--bs-btn-info-color);
   background-color: hsl(from var(--bs-btn-info-bg) h s calc(l - 10));
-  border-color: hsl(from var(--bs-btn-info-border), 25%);
+  border-color: hsl(from var(--bs-btn-info-border) h s calc(l - 25));
 }
 .btn-info:hover {
   color: var(--bs-btn-info-color);
@@ -3734,7 +3839,7 @@ fieldset[disabled] .btn-info.focus {
 .btn-warning.focus {
   color: var(--bs-btn-warning-color);
   background-color: hsl(from var(--bs-btn-warning-bg) h s calc(l - 10));
-  border-color: hsl(from var(--bs-btn-warning-border), 25%);
+  border-color: hsl(from var(--bs-btn-warning-border) h s calc(l - 25));
 }
 .btn-warning:hover {
   color: var(--bs-btn-warning-color);
@@ -3787,7 +3892,7 @@ fieldset[disabled] .btn-warning.focus {
 .btn-danger.focus {
   color: var(--bs-btn-danger-color);
   background-color: hsl(from var(--bs-btn-danger-bg) h s calc(l - 10));
-  border-color: hsl(from var(--bs-btn-danger-border), 25%);
+  border-color: hsl(from var(--bs-btn-danger-border) h s calc(l - 25));
 }
 .btn-danger:hover {
   color: var(--bs-btn-danger-color);
@@ -5284,42 +5389,78 @@ a.label:focus {
 }
 .label-default[href]:hover,
 .label-default[href]:focus {
-  background-color: hsl(from var(--bs-label-default-bg) h s calc(l - 10));
+  background-color: var(--bs-label-default-bg);
+}
+@supports (color: hsl(from #000 h s calc(l - 1))) {
+  .label-default[href]:hover,
+  .label-default[href]:focus {
+    background-color: hsl(from var(--bs-label-default-bg) h s calc(l - 10));
+  }
 }
 .label-primary {
   background-color: var(--bs-label-primary-bg);
 }
 .label-primary[href]:hover,
 .label-primary[href]:focus {
-  background-color: hsl(from var(--bs-label-primary-bg) h s calc(l - 10));
+  background-color: var(--bs-label-primary-bg);
+}
+@supports (color: hsl(from #000 h s calc(l - 1))) {
+  .label-primary[href]:hover,
+  .label-primary[href]:focus {
+    background-color: hsl(from var(--bs-label-primary-bg) h s calc(l - 10));
+  }
 }
 .label-success {
   background-color: var(--bs-label-success-bg);
 }
 .label-success[href]:hover,
 .label-success[href]:focus {
-  background-color: hsl(from var(--bs-label-success-bg) h s calc(l - 10));
+  background-color: var(--bs-label-success-bg);
+}
+@supports (color: hsl(from #000 h s calc(l - 1))) {
+  .label-success[href]:hover,
+  .label-success[href]:focus {
+    background-color: hsl(from var(--bs-label-success-bg) h s calc(l - 10));
+  }
 }
 .label-info {
   background-color: var(--bs-label-info-bg);
 }
 .label-info[href]:hover,
 .label-info[href]:focus {
-  background-color: hsl(from var(--bs-label-info-bg) h s calc(l - 10));
+  background-color: var(--bs-label-info-bg);
+}
+@supports (color: hsl(from #000 h s calc(l - 1))) {
+  .label-info[href]:hover,
+  .label-info[href]:focus {
+    background-color: hsl(from var(--bs-label-info-bg) h s calc(l - 10));
+  }
 }
 .label-warning {
   background-color: var(--bs-label-warning-bg);
 }
 .label-warning[href]:hover,
 .label-warning[href]:focus {
-  background-color: hsl(from var(--bs-label-warning-bg) h s calc(l - 10));
+  background-color: var(--bs-label-warning-bg);
+}
+@supports (color: hsl(from #000 h s calc(l - 1))) {
+  .label-warning[href]:hover,
+  .label-warning[href]:focus {
+    background-color: hsl(from var(--bs-label-warning-bg) h s calc(l - 10));
+  }
 }
 .label-danger {
   background-color: var(--bs-label-danger-bg);
 }
 .label-danger[href]:hover,
 .label-danger[href]:focus {
-  background-color: hsl(from var(--bs-label-danger-bg) h s calc(l - 10));
+  background-color: var(--bs-label-danger-bg);
+}
+@supports (color: hsl(from #000 h s calc(l - 1))) {
+  .label-danger[href]:hover,
+  .label-danger[href]:focus {
+    background-color: hsl(from var(--bs-label-danger-bg) h s calc(l - 10));
+  }
 }
 .badge {
   display: inline-block;
@@ -5471,10 +5612,20 @@ a.thumbnail.active {
   border-color: var(--bs-alert-success-border);
 }
 .alert-success hr {
-  border-top-color: hsl(from var(--bs-alert-success-border) h s calc(l - 5));
+  border-top-color: var(--bs-alert-success-border);
+}
+@supports (color: hsl(from #000 h s calc(l - 1))) {
+  .alert-success hr {
+    border-top-color: hsl(from var(--bs-alert-success-border) h s calc(l - 5));
+  }
 }
 .alert-success .alert-link {
-  color: hsl(from var(--bs-alert-success-text) h s calc(l - 10));
+  color: var(--bs-alert-success-text);
+}
+@supports (color: hsl(from #000 h s calc(l - 1))) {
+  .alert-success .alert-link {
+    color: hsl(from var(--bs-alert-success-text) h s calc(l - 10));
+  }
 }
 .alert-info {
   color: var(--bs-alert-info-text);
@@ -5482,10 +5633,20 @@ a.thumbnail.active {
   border-color: var(--bs-alert-info-border);
 }
 .alert-info hr {
-  border-top-color: hsl(from var(--bs-alert-info-border) h s calc(l - 5));
+  border-top-color: var(--bs-alert-info-border);
+}
+@supports (color: hsl(from #000 h s calc(l - 1))) {
+  .alert-info hr {
+    border-top-color: hsl(from var(--bs-alert-info-border) h s calc(l - 5));
+  }
 }
 .alert-info .alert-link {
-  color: hsl(from var(--bs-alert-info-text) h s calc(l - 10));
+  color: var(--bs-alert-info-text);
+}
+@supports (color: hsl(from #000 h s calc(l - 1))) {
+  .alert-info .alert-link {
+    color: hsl(from var(--bs-alert-info-text) h s calc(l - 10));
+  }
 }
 .alert-warning {
   color: var(--bs-alert-warning-text);
@@ -5493,10 +5654,20 @@ a.thumbnail.active {
   border-color: var(--bs-alert-warning-border);
 }
 .alert-warning hr {
-  border-top-color: hsl(from var(--bs-alert-warning-border) h s calc(l - 5));
+  border-top-color: var(--bs-alert-warning-border);
+}
+@supports (color: hsl(from #000 h s calc(l - 1))) {
+  .alert-warning hr {
+    border-top-color: hsl(from var(--bs-alert-warning-border) h s calc(l - 5));
+  }
 }
 .alert-warning .alert-link {
-  color: hsl(from var(--bs-alert-warning-text) h s calc(l - 10));
+  color: var(--bs-alert-warning-text);
+}
+@supports (color: hsl(from #000 h s calc(l - 1))) {
+  .alert-warning .alert-link {
+    color: hsl(from var(--bs-alert-warning-text) h s calc(l - 10));
+  }
 }
 .alert-danger {
   color: var(--bs-alert-danger-text);
@@ -5504,10 +5675,20 @@ a.thumbnail.active {
   border-color: var(--bs-alert-danger-border);
 }
 .alert-danger hr {
-  border-top-color: hsl(from var(--bs-alert-danger-border) h s calc(l - 5));
+  border-top-color: var(--bs-alert-danger-border);
+}
+@supports (color: hsl(from #000 h s calc(l - 1))) {
+  .alert-danger hr {
+    border-top-color: hsl(from var(--bs-alert-danger-border) h s calc(l - 5));
+  }
 }
 .alert-danger .alert-link {
-  color: hsl(from var(--bs-alert-danger-text) h s calc(l - 10));
+  color: var(--bs-alert-danger-text);
+}
+@supports (color: hsl(from #000 h s calc(l - 1))) {
+  .alert-danger .alert-link {
+    color: hsl(from var(--bs-alert-danger-text) h s calc(l - 10));
+  }
 }
 @keyframes progress-bar-stripes {
   from {
@@ -5717,7 +5898,15 @@ button.list-group-item-success:hover,
 a.list-group-item-success:focus,
 button.list-group-item-success:focus {
   color: var(--bs-state-success-text);
-  background-color: hsl(from var(--bs-state-success-bg) h s calc(l - 5));
+  background-color: var(--bs-state-success-bg);
+}
+@supports (color: hsl(from #000 h s calc(l - 1))) {
+  a.list-group-item-success:hover,
+  button.list-group-item-success:hover,
+  a.list-group-item-success:focus,
+  button.list-group-item-success:focus {
+    background-color: hsl(from var(--bs-state-success-bg) h s calc(l - 5));
+  }
 }
 a.list-group-item-success.active,
 button.list-group-item-success.active,
@@ -5746,7 +5935,15 @@ button.list-group-item-info:hover,
 a.list-group-item-info:focus,
 button.list-group-item-info:focus {
   color: var(--bs-state-info-text);
-  background-color: hsl(from var(--bs-state-info-bg) h s calc(l - 5));
+  background-color: var(--bs-state-info-bg);
+}
+@supports (color: hsl(from #000 h s calc(l - 1))) {
+  a.list-group-item-info:hover,
+  button.list-group-item-info:hover,
+  a.list-group-item-info:focus,
+  button.list-group-item-info:focus {
+    background-color: hsl(from var(--bs-state-info-bg) h s calc(l - 5));
+  }
 }
 a.list-group-item-info.active,
 button.list-group-item-info.active,
@@ -5775,7 +5972,15 @@ button.list-group-item-warning:hover,
 a.list-group-item-warning:focus,
 button.list-group-item-warning:focus {
   color: var(--bs-state-warning-text);
-  background-color: hsl(from var(--bs-state-warning-bg) h s calc(l - 5));
+  background-color: var(--bs-state-warning-bg);
+}
+@supports (color: hsl(from #000 h s calc(l - 1))) {
+  a.list-group-item-warning:hover,
+  button.list-group-item-warning:hover,
+  a.list-group-item-warning:focus,
+  button.list-group-item-warning:focus {
+    background-color: hsl(from var(--bs-state-warning-bg) h s calc(l - 5));
+  }
 }
 a.list-group-item-warning.active,
 button.list-group-item-warning.active,
@@ -5804,7 +6009,15 @@ button.list-group-item-danger:hover,
 a.list-group-item-danger:focus,
 button.list-group-item-danger:focus {
   color: var(--bs-state-danger-text);
-  background-color: hsl(from var(--bs-state-danger-bg) h s calc(l - 5));
+  background-color: var(--bs-state-danger-bg);
+}
+@supports (color: hsl(from #000 h s calc(l - 1))) {
+  a.list-group-item-danger:hover,
+  button.list-group-item-danger:hover,
+  a.list-group-item-danger:focus,
+  button.list-group-item-danger:focus {
+    background-color: hsl(from var(--bs-state-danger-bg) h s calc(l - 5));
+  }
 }
 a.list-group-item-danger.active,
 button.list-group-item-danger.active,
