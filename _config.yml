@@ -39,7 +39,7 @@ themes:           https://themes.getbootstrap.com
 cdn:
   # See https://www.srihash.org for info on how to generate the hashes
   css:            https://stackpath.bootstrapcdn.com/bootstrap/3.4.2/css/bootstrap.min.css
-  css_hash:       "sha384-hR1yFPUip9+j3nimMbQBCpWi/43QsNfz5L5O1wKaV8bMZ46CrRAskI/dr+n66S0c"
+  css_hash:       "sha384-FDnOt6/zkxiwAJEG7MAaJBBs39Bo2Zbk8F7kqcREkDow159+tgCtC2L7Qz5DQ4MI"
   css_theme:      https://stackpath.bootstrapcdn.com/bootstrap/3.4.2/css/bootstrap-theme.min.css
   css_theme_hash: "sha384-zIgkjOtSaqAKA2S+dLZ/PZcFhUWu9FNqdNe1EpcMKW2rPTtFihnB96cwVIdAN4nG"
   js:             https://stackpath.bootstrapcdn.com/bootstrap/3.4.2/js/bootstrap.min.js
