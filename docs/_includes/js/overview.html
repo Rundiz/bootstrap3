@@ -141,7 +141,7 @@ $('#yourTooltip').tooltip({
 
   <div class="bs-callout bs-callout-danger" id="callout-sanitizer-no-createhtmldocument">
     <h4>Browsers without <code>document.implementation.createHTMLDocument</code></h4>
-    <p>In case of browsers that don't support <code>document.implementation.createHTMLDocument</code>, like Internet Explorer 8, the built-in sanitize function returns the HTML as is.</p>
+    <p>In case of browsers that don't support <code>document.implementation.createHTMLDocument</code>, the built-in sanitize function returns the HTML as is.</p>
     <p>If you want to perform sanitization in this case, please specify <code>sanitizeFn</code> and use an external library like <a href="https://www.npmjs.com/package/dompurify">DOMPurify</a>.</p>
   </div>
 
