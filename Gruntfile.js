@@ -127,7 +127,7 @@ module.exports = function (grunt) {
       options: {
         compress: true,
         mangle: true,
-        ie8: true,
+        ie8: false,
         output: {
           comments: /^!|@preserve|@license|@cc_on/i
         }
@@ -148,7 +148,7 @@ module.exports = function (grunt) {
 
     less: {
       options: {
-        ieCompat: true,
+        ieCompat: false,
         strictMath: true,
         sourceMap: true,
         outputSourceFiles: true
@@ -176,13 +176,6 @@ module.exports = function (grunt) {
         },
         src: 'docs/assets/less/docs.less',
         dest: 'docs/assets/css/docs.css'
-      },
-      docsIe: {
-        options: {
-          sourceMap: false
-        },
-        src: 'docs/assets/less/ie10-viewport-bug-workaround.less',
-        dest: 'docs/assets/css/ie10-viewport-bug-workaround.css'
       }
     },
 
@@ -193,7 +186,7 @@ module.exports = function (grunt) {
           sourcesContent: true
         },
         processors: [
-          require('autoprefixer')(configBridge.config.autoprefixer)
+          require('autoprefixer')({ cascade: false })
         ]
       },
       core: {
@@ -234,7 +227,6 @@ module.exports = function (grunt) {
 
     cssmin: {
       options: {
-        compatibility: 'ie8',
         sourceMap: true,
         sourceMapInlineSources: true,
         level: {
@@ -425,7 +417,7 @@ module.exports = function (grunt) {
   });
 
   // Docs task.
-  grunt.registerTask('docs-css', ['less:docs', 'less:docsIe', 'postcss:docs', 'postcss:examples', 'cssmin:docs']);
+  grunt.registerTask('docs-css', ['less:docs', 'postcss:docs', 'postcss:examples', 'cssmin:docs']);
   grunt.registerTask('lint-docs-css', ['stylelint:docs', 'stylelint:examples']);
   grunt.registerTask('docs-js', ['uglify:docs', 'uglify:customize']);
   grunt.registerTask('lint-docs-js', ['jshint:assets', 'jscs:assets']);

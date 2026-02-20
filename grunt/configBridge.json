@@ -17,23 +17,11 @@
       "../assets/js/vendor/clipboard.min.js",
       "../assets/js/vendor/anchor.min.js",
       "../assets/js/src/application.js",
-      "../assets/js/src/search.js",
-      "../assets/js/ie10-viewport-bug-workaround.js",
-      "../assets/js/ie-emulation-modes-warning.js"
+      "../assets/js/src/search.js"
     ]
   },
   "config": {
     "autoprefixer": {
-      "browsers": [
-        "Android 2.3",
-        "Android >= 4",
-        "Chrome >= 20",
-        "Firefox >= 24",
-        "Explorer >= 8",
-        "iOS >= 6",
-        "Opera >= 12",
-        "Safari >= 6"
-      ],
       "cascade": false
     },
     "jqueryCheck": [
