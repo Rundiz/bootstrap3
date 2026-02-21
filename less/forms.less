@@ -442,7 +442,7 @@ output {
   margin-top: 5px;
   margin-bottom: 10px;
   color: var(--bs-text-color);
-  @supports (color: hsl(from #000 h s calc(l + 1))) {
+  @supports (color: hsl(from #000 h s calc(l - 1))) {
     color: ~"hsl(from var(--bs-text-color) h s calc(l + 25))"; // lighten the text some for contrast
   }
 }
