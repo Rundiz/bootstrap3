@@ -22,9 +22,13 @@
     border-color: @border-color;
     .box-shadow(inset 0 1px 1px rgba(0, 0, 0, .075)); // Redeclare so transitions work
     &:focus {
-      border-color: hsl(from @border-color h s calc(l - 10));
-      @secondshadowcolor: ~"hsl(from "@border-color ~" h s calc(l + 20))";
-      @shadow: inset 0 1px 1px rgba(0, 0, 0, .075), 0 0 6px @secondshadowcolor;
+      border-color: @border-color;
+      @shadow: inset 0 1px 1px rgba(0, 0, 0, .075), 0 0 6px @border-color;
+      @supports (color: hsl(from #000 h s calc(l - 1))) {
+        border-color: hsl(from @border-color h s calc(l - 10));
+        @secondshadowcolor: ~"hsl(from "@border-color ~" h s calc(l + 20))";
+        @shadow: inset 0 1px 1px rgba(0, 0, 0, .075), 0 0 6px @secondshadowcolor;
+      }
       .box-shadow(@shadow);
     }
   }
@@ -54,11 +58,14 @@
 // Example usage: change the default blue border and shadow to white for better
 // contrast against a dark gray background.
 .form-control-focus(@color: var(--bs-input-border-focus)) {
-  @color-rgba: rgb(from @color r g b / .6);
   &:focus {
     border-color: @color;
     outline: 0;
-    .box-shadow(~"inset 0 1px 1px rgb(0 0 0 / .075), 0 0 8px @{color-rgba}");
+    .box-shadow(~"inset 0 1px 1px rgb(0 0 0 / .075), 0 0 8px rgba(102, 175, 233, .6)");
+    @supports (color: rgb(from #000 r g b / .6)) {
+      @color-rgba: rgb(from @color r g b / .6);
+      .box-shadow(~"inset 0 1px 1px rgb(0 0 0 / .075), 0 0 8px @{color-rgba}");
+    }
   }
 }
 

@@ -51,20 +51,33 @@
     --bs-font-family-base: var(--bs-font-family-sans-serif);
 
     --bs-font-size-base: @font-size-base;
-    --bs-font-size-large: ~"round(up, calc(var(--bs-font-size-base) * 1.25), 1px)"; // ~18px
-    --bs-font-size-small: ~"round(up, calc(var(--bs-font-size-base) * .85), 1px)"; // ~12px
+    --bs-font-size-large: calc(var(--bs-font-size-base) * 1.25); // ~18px
+    --bs-font-size-small: calc(var(--bs-font-size-base) * .85); // ~12px
 
-    --bs-font-size-h1: ~"round(down, calc(var(--bs-font-size-base) * 2.6), 1px)"; // ~36px
-    --bs-font-size-h2: ~"round(down, calc(var(--bs-font-size-base) * 2.15), 1px)"; // ~30px
-    --bs-font-size-h3: ~"round(up, calc(var(--bs-font-size-base) * 1.7), 1px)"; // ~24px
-    --bs-font-size-h4: ~"round(up, calc(var(--bs-font-size-base) * 1.25), 1px)"; // ~18px
+    --bs-font-size-h1: calc(var(--bs-font-size-base) * 2.6); // ~36px
+    --bs-font-size-h2: calc(var(--bs-font-size-base) * 2.15); // ~30px
+    --bs-font-size-h3: calc(var(--bs-font-size-base) * 1.7); // ~24px
+    --bs-font-size-h4: calc(var(--bs-font-size-base) * 1.25); // ~18px
     --bs-font-size-h5: var(--bs-font-size-base);
-    --bs-font-size-h6: ~"round(up, calc(var(--bs-font-size-base) * .85), 1px)"; // ~12px
+    --bs-font-size-h6: calc(var(--bs-font-size-base) * .85); // ~12px
+    @supports (width: round(up, 1px, 1px)) {
+        --bs-font-size-large: ~"round(up, calc(var(--bs-font-size-base) * 1.25), 1px)"; // ~18px
+        --bs-font-size-small: ~"round(up, calc(var(--bs-font-size-base) * .85), 1px)"; // ~12px
+
+        --bs-font-size-h1: ~"round(down, calc(var(--bs-font-size-base) * 2.6), 1px)"; // ~36px
+        --bs-font-size-h2: ~"round(down, calc(var(--bs-font-size-base) * 2.15), 1px)"; // ~30px
+        --bs-font-size-h3: ~"round(up, calc(var(--bs-font-size-base) * 1.7), 1px)"; // ~24px
+        --bs-font-size-h4: ~"round(up, calc(var(--bs-font-size-base) * 1.25), 1px)"; // ~18px
+        --bs-font-size-h6: ~"round(up, calc(var(--bs-font-size-base) * .85), 1px)"; // ~12px
+    }
 
     //** Unit-less `line-height` for use in components like buttons.
     --bs-line-height-base: @line-height-base; // 20/14
     //** Computed "line-height" (`font-size` * `line-height`) for use with `margin`, `padding`, etc.
-    --bs-line-height-computed: ~"round(down, calc(var(--bs-font-size-base) * var(--bs-line-height-base)), 1px)"; // ~20px
+    --bs-line-height-computed: calc(var(--bs-font-size-base) * var(--bs-line-height-base)); // ~20px
+    @supports (width: round(up, 1px, 1px)) {
+        --bs-line-height-computed: ~"round(down, calc(var(--bs-font-size-base) * var(--bs-line-height-base)), 1px)"; // ~20px
+    }
 
     //** By default, this inherits from the `<body>`.
     --bs-headings-font-family: @headings-font-family;
@@ -210,9 +223,14 @@
     //** Default `.form-control` height
     --bs-input-height-base: calc(var(--bs-line-height-computed) + calc(var(--bs-padding-base-vertical) * 2) + 2px);
     //** Large `.form-control` height
-    --bs-input-height-large: ~"calc(round(up, calc(var(--bs-font-size-large) * var(--bs-line-height-large)), 1px) + calc(var(--bs-padding-large-vertical) * 2) + 2px)";
+    --bs-input-height-large: calc(calc(var(--bs-font-size-large) * var(--bs-line-height-large)) + calc(var(--bs-padding-large-vertical) * 2) + 2px);
     //** Small `.form-control` height
-    --bs-input-height-small: ~"calc(round(down, calc(var(--bs-font-size-small) * var(--bs-line-height-small)), 1px) + calc(var(--bs-padding-small-vertical) * 2) + 2px)";
+    --bs-input-height-small: calc(calc(var(--bs-font-size-small) * var(--bs-line-height-small)) + calc(var(--bs-padding-small-vertical) * 2) + 2px);
+    @supports (width: round(up, 1px, 1px)) {
+        --bs-input-height-large: ~"calc(round(up, calc(var(--bs-font-size-large) * var(--bs-line-height-large)), 1px) + calc(var(--bs-padding-large-vertical) * 2) + 2px)";
+        --bs-input-height-small: ~"calc(round(down, calc(var(--bs-font-size-small) * var(--bs-line-height-small)), 1px) + calc(var(--bs-padding-small-vertical) * 2) + 2px)";
+    }
+
 
     //** `.form-group` margin
     --bs-form-group-margin-bottom: @form-group-margin-bottom;
@@ -362,7 +380,10 @@
     --bs-navbar-height: @navbar-height;
     --bs-navbar-margin-bottom: var(--bs-line-height-computed);
     --bs-navbar-border-radius: var(--bs-border-radius-base);
-    --bs-navbar-padding-horizontal: ~"round(down, calc(var(--bs-grid-gutter-width) / 2), 1px)";
+    --bs-navbar-padding-horizontal: calc(var(--bs-grid-gutter-width) / 2);
+    @supports (width: round(up, 1px, 1px)) {
+        --bs-navbar-padding-horizontal: ~"round(down, calc(var(--bs-grid-gutter-width) / 2), 1px)";
+    }
     --bs-navbar-padding-vertical: calc((var(--bs-navbar-height) - var(--bs-line-height-computed)) / 2);
     --bs-navbar-collapse-max-height: @navbar-collapse-max-height;
 
@@ -490,8 +511,12 @@
     --bs-jumbotron-color: @jumbotron-color;
     --bs-jumbotron-bg: var(--bs-gray-lighter);
     --bs-jumbotron-heading-color: @jumbotron-heading-color;
-    --bs-jumbotron-font-size: ~"round(up, calc(var(--bs-font-size-base) * 1.5), 1px)";
-    --bs-jumbotron-heading-font-size: ~"round(up, calc(var(--bs-font-size-base) * 4.5), 1px)";
+    --bs-jumbotron-font-size: calc(var(--bs-font-size-base) * 1.5);
+    --bs-jumbotron-heading-font-size: calc(var(--bs-font-size-base) * 4.5);
+    @supports (width: round(up, 1px, 1px)) {
+        --bs-jumbotron-font-size: ~"round(up, calc(var(--bs-font-size-base) * 1.5), 1px)";
+        --bs-jumbotron-heading-font-size: ~"round(up, calc(var(--bs-font-size-base) * 4.5), 1px)";
+    }
 
 
     //== Form states and alerts

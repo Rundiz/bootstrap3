@@ -63,9 +63,12 @@ p {
 
 .lead {
   margin-bottom: var(--bs-line-height-computed);
-  font-size: ~"round(down, calc(var(--bs-font-size-base) * 1.15), 1px)";
+  font-size: calc(var(--bs-font-size-base) * 1.15);
   font-weight: 300;
   line-height: 1.4;
+  @supports (width: round(up, 1px, 1px)) {
+    font-size: ~"round(down, calc(var(--bs-font-size-base) * 1.15), 1px)";
+  }
 
   @media (min-width: @screen-sm-min) {
     font-size: calc(var(--bs-font-size-base) * 1.5);
@@ -79,7 +82,10 @@ p {
 // Ex: (12px small font / 14px base font) * 100% = about 85%
 small,
 .small {
-  font-size: ~"round(down, calc(100% * (var(--bs-font-size-small) / var(--bs-font-size-base))), 1px)";
+  font-size: calc(100% * (var(--bs-font-size-small) / var(--bs-font-size-base)));
+  @supports (width: round(up, 1px, 1px)) {
+    font-size: ~"round(down, calc(100% * (var(--bs-font-size-small) / var(--bs-font-size-base))), 1px)";
+  }
 }
 
 mark,

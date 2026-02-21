@@ -35,8 +35,11 @@
 .panel-title {
   margin-top: 0;
   margin-bottom: 0;
-  font-size: ~"round(up, calc(var(--bs-font-size-base) * 1.125), 1px)";
+  font-size: calc(var(--bs-font-size-base) * 1.125);
   color: inherit;
+  @supports (width: round(up, 1px, 1px)) {
+    font-size: ~"round(up, calc(var(--bs-font-size-base) * 1.125), 1px)";
+  }
 
   > a,
   > small,

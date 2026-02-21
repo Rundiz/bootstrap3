@@ -441,7 +441,10 @@ output {
   display: block; // account for any element using help-block
   margin-top: 5px;
   margin-bottom: 10px;
-  color: ~"hsl(from var(--bs-text-color) h s calc(l + 25))"; // lighten the text some for contrast
+  color: var(--bs-text-color);
+  @supports (color: hsl(from #000 h s calc(l + 1))) {
+    color: ~"hsl(from var(--bs-text-color) h s calc(l + 25))"; // lighten the text some for contrast
+  }
 }
 
 
@@ -572,7 +575,10 @@ output {
   // Reposition the icon because it's now within a grid column and columns have
   // `position: relative;` on them. Also accounts for the grid gutter padding.
   .has-feedback .form-control-feedback {
-    right: ~"round(down, calc(var(--bs-grid-gutter-width) / 2), 1px)";
+    right: calc(var(--bs-grid-gutter-width) / 2);
+    @supports (width: round(up, 1px, 1px)) {
+      right: ~"round(down, calc(var(--bs-grid-gutter-width) / 2), 1px)";
+    }
   }
 
   // Form group sizes

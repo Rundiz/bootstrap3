@@ -4,17 +4,25 @@
 
 // Centered container element
 .container-fixed(@gutter: var(--bs-grid-gutter-width)) {
-  padding-right: ~"round(up, calc("@gutter~" / 2), 1px)";
-  padding-left: ~"round(down, calc("@gutter~" / 2), 1px)";
+  padding-right: calc(@gutter / 2);
+  padding-left: calc(@gutter / 2);
   margin-right: auto;
   margin-left: auto;
+  @supports (width: round(up, 1px, 1px)) {
+    padding-right: ~"round(up, calc("@gutter~" / 2), 1px)";
+    padding-left: ~"round(down, calc("@gutter~" / 2), 1px)";
+  }
   &:extend(.clearfix all);
 }
 
 // Creates a wrapper for a series of columns
 .make-row(@gutter: var(--bs-grid-gutter-width)) {
-  margin-right: ~"round(down, calc("@gutter~" / -2), 1px)";
-  margin-left: ~"round(up, calc("@gutter~" / -2), 1px)";
+  margin-right: calc(@gutter / -2);
+  margin-left: calc(@gutter / -2);
+  @supports (width: round(up, 1px, 1px)) {
+    margin-right: ~"round(down, calc("@gutter~" / -2), 1px)";
+    margin-left: ~"round(up, calc("@gutter~" / -2), 1px)";
+  }
   &:extend(.clearfix all);
 }
 

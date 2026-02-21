@@ -629,7 +629,10 @@
 
   .navbar-collapse,
   .navbar-form {
-    border-color: hsl(from var(--bs-navbar-inverse-bg) h s calc(l - 7));
+    border-color: var(--bs-navbar-inverse-bg);
+    @supports (color: hsl(from #000 h s calc(l - 1))) {
+      border-color: hsl(from var(--bs-navbar-inverse-bg) h s calc(l - 7));
+    }
   }
 
   .navbar-link {

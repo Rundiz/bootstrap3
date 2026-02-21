@@ -22,7 +22,10 @@
   }
 
   > hr {
-    border-top-color: hsl(from var(--bs-jumbotron-bg) h s calc(l - 10));
+    border-top-color: var(--bs-jumbotron-bg);
+    @supports (color: hsl(from #000 h s calc(l - 1))) {
+      border-top-color: hsl(from var(--bs-jumbotron-bg) h s calc(l - 10));
+    }
   }
 
   .container &,
