@@ -39,8 +39,8 @@ themes:           https://themes.getbootstrap.com
 cdn:
   # See https://www.srihash.org for info on how to generate the hashes
   css:            https://stackpath.bootstrapcdn.com/bootstrap/3.4.2/css/bootstrap.min.css
-  css_hash:       "sha384-P8r1KNJC5aPwMy0yKUBpBDgfgMq+mqNR/fsNvzaXLQYHI+yckIrGZ/dHpa3Eqhsi"
+  css_hash:       "sha384-n3h5++AtMwAMwmywFX3tu90/KKGvahPR3wLy6C5yJTdqErDb0Iwi0gq/T1mTKwAD"
   css_theme:      https://stackpath.bootstrapcdn.com/bootstrap/3.4.2/css/bootstrap-theme.min.css
-  css_theme_hash: "sha384-uUqjJwS+eoFYic8yHzhSI+szbyU0SreEujhFphzKTThePG6om4NPCkVnEKSF2DHo"
+  css_theme_hash: "sha384-Zgu2jZ3YZ3PslZsFeUk1zO4tjmRvw6NP/Ry2SfvGN0Nm29sj160uuxrPFYpWc15c"
   js:             https://stackpath.bootstrapcdn.com/bootstrap/3.4.2/js/bootstrap.min.js
   js_hash:        "sha384-T6duU810h05V2xJbWf+s83Kq40xbYZIIM2LbNh0hSMXDzIhyrOsZwcQEnm1Q6xDv"

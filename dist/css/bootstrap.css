@@ -26,16 +26,16 @@
   --bs-font-family-monospace: Menlo, Monaco, Consolas, "Courier New", monospace;
   --bs-font-family-base: var(--bs-font-family-sans-serif);
   --bs-font-size-base: 14px;
-  --bs-font-size-large: round(up, calc(var(--bs-font-size-base) * 1.25), 1px);
-  --bs-font-size-small: round(up, calc(var(--bs-font-size-base) * .85), 1px);
-  --bs-font-size-h1: round(down, calc(var(--bs-font-size-base) * 2.6), 1px);
-  --bs-font-size-h2: round(down, calc(var(--bs-font-size-base) * 2.15), 1px);
-  --bs-font-size-h3: round(up, calc(var(--bs-font-size-base) * 1.7), 1px);
-  --bs-font-size-h4: round(up, calc(var(--bs-font-size-base) * 1.25), 1px);
+  --bs-font-size-large: calc(var(--bs-font-size-base) * 1.25);
+  --bs-font-size-small: calc(var(--bs-font-size-base) * 0.85);
+  --bs-font-size-h1: calc(var(--bs-font-size-base) * 2.6);
+  --bs-font-size-h2: calc(var(--bs-font-size-base) * 2.15);
+  --bs-font-size-h3: calc(var(--bs-font-size-base) * 1.7);
+  --bs-font-size-h4: calc(var(--bs-font-size-base) * 1.25);
   --bs-font-size-h5: var(--bs-font-size-base);
-  --bs-font-size-h6: round(up, calc(var(--bs-font-size-base) * .85), 1px);
+  --bs-font-size-h6: calc(var(--bs-font-size-base) * 0.85);
   --bs-line-height-base: 1.42857143;
-  --bs-line-height-computed: round(down, calc(var(--bs-font-size-base) * var(--bs-line-height-base)), 1px);
+  --bs-line-height-computed: calc(var(--bs-font-size-base) * var(--bs-line-height-base));
   --bs-headings-font-family: inherit;
   --bs-headings-font-weight: 500;
   --bs-headings-line-height: 1.1;
@@ -100,8 +100,8 @@
   --bs-input-border-focus: #66afe9;
   --bs-input-color-placeholder: #999;
   --bs-input-height-base: calc(var(--bs-line-height-computed) + calc(var(--bs-padding-base-vertical) * 2) + 2px);
-  --bs-input-height-large: calc(round(up, calc(var(--bs-font-size-large) * var(--bs-line-height-large)), 1px) + calc(var(--bs-padding-large-vertical) * 2) + 2px);
-  --bs-input-height-small: calc(round(down, calc(var(--bs-font-size-small) * var(--bs-line-height-small)), 1px) + calc(var(--bs-padding-small-vertical) * 2) + 2px);
+  --bs-input-height-large: calc(calc(var(--bs-font-size-large) * var(--bs-line-height-large)) + calc(var(--bs-padding-large-vertical) * 2) + 2px);
+  --bs-input-height-small: calc(calc(var(--bs-font-size-small) * var(--bs-line-height-small)) + calc(var(--bs-padding-small-vertical) * 2) + 2px);
   --bs-form-group-margin-bottom: 15px;
   --bs-legend-color: var(--bs-gray-dark);
   --bs-legend-border-color: #e5e5e5;
@@ -155,7 +155,7 @@
   --bs-navbar-height: 50px;
   --bs-navbar-margin-bottom: var(--bs-line-height-computed);
   --bs-navbar-border-radius: var(--bs-border-radius-base);
-  --bs-navbar-padding-horizontal: round(down, calc(var(--bs-grid-gutter-width) / 2), 1px);
+  --bs-navbar-padding-horizontal: calc(var(--bs-grid-gutter-width) / 2);
   --bs-navbar-padding-vertical: calc((var(--bs-navbar-height) - var(--bs-line-height-computed)) / 2);
   --bs-navbar-collapse-max-height: 340px;
   --bs-navbar-default-color: #777;
@@ -227,8 +227,8 @@
   --bs-jumbotron-color: inherit;
   --bs-jumbotron-bg: var(--bs-gray-lighter);
   --bs-jumbotron-heading-color: inherit;
-  --bs-jumbotron-font-size: round(up, calc(var(--bs-font-size-base) * 1.5), 1px);
-  --bs-jumbotron-heading-font-size: round(up, calc(var(--bs-font-size-base) * 4.5), 1px);
+  --bs-jumbotron-font-size: calc(var(--bs-font-size-base) * 1.5);
+  --bs-jumbotron-heading-font-size: calc(var(--bs-font-size-base) * 4.5);
   --bs-state-success-text: #3c763d;
   --bs-state-success-bg: #dff0d8;
   --bs-state-success-border: #d6e9c6;
@@ -392,6 +392,39 @@
   --bs-dl-horizontal-offset: var(--bs-component-offset-horizontal);
   --bs-dl-horizontal-breakpoint: var(--bs-grid-float-breakpoint);
   --bs-hr-border: var(--bs-gray-lighter);
+}
+@supports (width: round(up, 1px, 1px)) {
+  :root {
+    --bs-font-size-large: round(up, calc(var(--bs-font-size-base) * 1.25), 1px);
+    --bs-font-size-small: round(up, calc(var(--bs-font-size-base) * .85), 1px);
+    --bs-font-size-h1: round(down, calc(var(--bs-font-size-base) * 2.6), 1px);
+    --bs-font-size-h2: round(down, calc(var(--bs-font-size-base) * 2.15), 1px);
+    --bs-font-size-h3: round(up, calc(var(--bs-font-size-base) * 1.7), 1px);
+    --bs-font-size-h4: round(up, calc(var(--bs-font-size-base) * 1.25), 1px);
+    --bs-font-size-h6: round(up, calc(var(--bs-font-size-base) * .85), 1px);
+  }
+}
+@supports (width: round(up, 1px, 1px)) {
+  :root {
+    --bs-line-height-computed: round(down, calc(var(--bs-font-size-base) * var(--bs-line-height-base)), 1px);
+  }
+}
+@supports (width: round(up, 1px, 1px)) {
+  :root {
+    --bs-input-height-large: calc(round(up, calc(var(--bs-font-size-large) * var(--bs-line-height-large)), 1px) + calc(var(--bs-padding-large-vertical) * 2) + 2px);
+    --bs-input-height-small: calc(round(down, calc(var(--bs-font-size-small) * var(--bs-line-height-small)), 1px) + calc(var(--bs-padding-small-vertical) * 2) + 2px);
+  }
+}
+@supports (width: round(up, 1px, 1px)) {
+  :root {
+    --bs-navbar-padding-horizontal: round(down, calc(var(--bs-grid-gutter-width) / 2), 1px);
+  }
+}
+@supports (width: round(up, 1px, 1px)) {
+  :root {
+    --bs-jumbotron-font-size: round(up, calc(var(--bs-font-size-base) * 1.5), 1px);
+    --bs-jumbotron-heading-font-size: round(up, calc(var(--bs-font-size-base) * 4.5), 1px);
+  }
 }
 /*! normalize.css v3.0.3 | MIT License | github.com/necolas/normalize.css */
 html {
@@ -1669,9 +1702,14 @@ p {
 }
 .lead {
   margin-bottom: var(--bs-line-height-computed);
-  font-size: round(down, calc(var(--bs-font-size-base) * 1.15), 1px);
+  font-size: calc(var(--bs-font-size-base) * 1.15);
   font-weight: 300;
   line-height: 1.4;
+}
+@supports (width: round(up, 1px, 1px)) {
+  .lead {
+    font-size: round(down, calc(var(--bs-font-size-base) * 1.15), 1px);
+  }
 }
 @media (min-width: 768px) {
   .lead {
@@ -1680,7 +1718,13 @@ p {
 }
 small,
 .small {
-  font-size: round(down, calc(100% * (var(--bs-font-size-small) / var(--bs-font-size-base))), 1px);
+  font-size: calc(100% * (var(--bs-font-size-small) / var(--bs-font-size-base)));
+}
+@supports (width: round(up, 1px, 1px)) {
+  small,
+  .small {
+    font-size: round(down, calc(100% * (var(--bs-font-size-small) / var(--bs-font-size-base))), 1px);
+  }
 }
 mark,
 .mark {
@@ -2017,10 +2061,16 @@ pre code {
   overflow-y: scroll;
 }
 .container {
-  padding-right: round(up, calc( var(--bs-grid-gutter-width)  / 2), 1px);
-  padding-left: round(down, calc( var(--bs-grid-gutter-width)  / 2), 1px);
+  padding-right: calc(var(--bs-grid-gutter-width) / 2);
+  padding-left: calc(var(--bs-grid-gutter-width) / 2);
   margin-right: auto;
   margin-left: auto;
+}
+@supports (width: round(up, 1px, 1px)) {
+  .container {
+    padding-right: round(up, calc( var(--bs-grid-gutter-width)  / 2), 1px);
+    padding-left: round(down, calc( var(--bs-grid-gutter-width)  / 2), 1px);
+  }
 }
 @media (min-width: 768px) {
   .container {
@@ -2038,14 +2088,26 @@ pre code {
   }
 }
 .container-fluid {
-  padding-right: round(up, calc( var(--bs-grid-gutter-width)  / 2), 1px);
-  padding-left: round(down, calc( var(--bs-grid-gutter-width)  / 2), 1px);
+  padding-right: calc(var(--bs-grid-gutter-width) / 2);
+  padding-left: calc(var(--bs-grid-gutter-width) / 2);
   margin-right: auto;
   margin-left: auto;
 }
+@supports (width: round(up, 1px, 1px)) {
+  .container-fluid {
+    padding-right: round(up, calc( var(--bs-grid-gutter-width)  / 2), 1px);
+    padding-left: round(down, calc( var(--bs-grid-gutter-width)  / 2), 1px);
+  }
+}
 .row {
-  margin-right: round(down, calc( var(--bs-grid-gutter-width)  / -2), 1px);
-  margin-left: round(up, calc( var(--bs-grid-gutter-width)  / -2), 1px);
+  margin-right: calc(var(--bs-grid-gutter-width) / -2);
+  margin-left: calc(var(--bs-grid-gutter-width) / -2);
+}
+@supports (width: round(up, 1px, 1px)) {
+  .row {
+    margin-right: round(down, calc( var(--bs-grid-gutter-width)  / -2), 1px);
+    margin-left: round(up, calc( var(--bs-grid-gutter-width)  / -2), 1px);
+  }
 }
 .row-no-gutters {
   margin-right: 0;
@@ -2105,8 +2167,61 @@ pre code {
 .col-lg-12 {
   position: relative;
   min-height: 1px;
-  padding-right: round(down, calc(var(--bs-grid-gutter-width) / 2), 1px);
-  padding-left: round(up, calc(var(--bs-grid-gutter-width) / 2), 1px);
+  padding-right: calc(var(--bs-grid-gutter-width) / 2);
+  padding-left: calc(var(--bs-grid-gutter-width) / 2);
+}
+@supports (width: round(up, 1px, 1px)) {
+  .col-xs-1,
+  .col-sm-1,
+  .col-md-1,
+  .col-lg-1,
+  .col-xs-2,
+  .col-sm-2,
+  .col-md-2,
+  .col-lg-2,
+  .col-xs-3,
+  .col-sm-3,
+  .col-md-3,
+  .col-lg-3,
+  .col-xs-4,
+  .col-sm-4,
+  .col-md-4,
+  .col-lg-4,
+  .col-xs-5,
+  .col-sm-5,
+  .col-md-5,
+  .col-lg-5,
+  .col-xs-6,
+  .col-sm-6,
+  .col-md-6,
+  .col-lg-6,
+  .col-xs-7,
+  .col-sm-7,
+  .col-md-7,
+  .col-lg-7,
+  .col-xs-8,
+  .col-sm-8,
+  .col-md-8,
+  .col-lg-8,
+  .col-xs-9,
+  .col-sm-9,
+  .col-md-9,
+  .col-lg-9,
+  .col-xs-10,
+  .col-sm-10,
+  .col-md-10,
+  .col-lg-10,
+  .col-xs-11,
+  .col-sm-11,
+  .col-md-11,
+  .col-lg-11,
+  .col-xs-12,
+  .col-sm-12,
+  .col-md-12,
+  .col-lg-12 {
+    padding-right: round(down, calc(var(--bs-grid-gutter-width) / 2), 1px);
+    padding-left: round(up, calc(var(--bs-grid-gutter-width) / 2), 1px);
+  }
 }
 .col-xs-1,
 .col-xs-2,
@@ -3150,7 +3265,12 @@ output {
 .form-control:focus {
   border-color: var(--bs-input-border-focus);
   outline: 0;
-  box-shadow: inset 0 1px 1px rgb(0 0 0 / .075), 0 0 8px rgb(from var(--bs-input-border-focus) r g b / 0.6);
+  box-shadow: inset 0 1px 1px rgb(0 0 0 / .075), 0 0 8px rgba(102, 175, 233, .6);
+}
+@supports (color: rgb(from #000 r g b / .6)) {
+  .form-control:focus {
+    box-shadow: inset 0 1px 1px rgb(0 0 0 / .075), 0 0 8px rgb(from var(--bs-input-border-focus) r g b / 0.6);
+  }
 }
 .form-control::-moz-placeholder {
   color: var(--bs-input-color-placeholder);
@@ -3391,8 +3511,13 @@ select[multiple].input-lg {
   box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
 }
 .has-success .form-control:focus {
-  border-color: hsl(from var(--bs-state-success-text) h s calc(l - 10));
-  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 6px hsl(from  var(--bs-state-success-text)  h s calc(l + 20));
+  border-color: var(--bs-state-success-text);
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 6px var(--bs-state-success-text);
+}
+@supports (color: hsl(from #000 h s calc(l - 1))) {
+  .has-success .form-control:focus {
+    border-color: hsl(from var(--bs-state-success-text) h s calc(l - 10));
+  }
 }
 .has-success .input-group-addon {
   color: var(--bs-state-success-text);
@@ -3419,8 +3544,13 @@ select[multiple].input-lg {
   box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
 }
 .has-warning .form-control:focus {
-  border-color: hsl(from var(--bs-state-warning-text) h s calc(l - 10));
-  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 6px hsl(from  var(--bs-state-warning-text)  h s calc(l + 20));
+  border-color: var(--bs-state-warning-text);
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 6px var(--bs-state-warning-text);
+}
+@supports (color: hsl(from #000 h s calc(l - 1))) {
+  .has-warning .form-control:focus {
+    border-color: hsl(from var(--bs-state-warning-text) h s calc(l - 10));
+  }
 }
 .has-warning .input-group-addon {
   color: var(--bs-state-warning-text);
@@ -3447,8 +3577,13 @@ select[multiple].input-lg {
   box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
 }
 .has-error .form-control:focus {
-  border-color: hsl(from var(--bs-state-danger-text) h s calc(l - 10));
-  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 6px hsl(from  var(--bs-state-danger-text)  h s calc(l + 20));
+  border-color: var(--bs-state-danger-text);
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 6px var(--bs-state-danger-text);
+}
+@supports (color: hsl(from #000 h s calc(l - 1))) {
+  .has-error .form-control:focus {
+    border-color: hsl(from var(--bs-state-danger-text) h s calc(l - 10));
+  }
 }
 .has-error .input-group-addon {
   color: var(--bs-state-danger-text);
@@ -3468,7 +3603,12 @@ select[multiple].input-lg {
   display: block;
   margin-top: 5px;
   margin-bottom: 10px;
-  color: hsl(from var(--bs-text-color) h s calc(l + 25));
+  color: var(--bs-text-color);
+}
+@supports (color: hsl(from #000 h s calc(l + 1))) {
+  .help-block {
+    color: hsl(from var(--bs-text-color) h s calc(l + 25));
+  }
 }
 @media (min-width: 768px) {
   .form-inline .form-group {
@@ -3533,8 +3673,14 @@ select[multiple].input-lg {
   min-height: calc(var(--bs-line-height-computed) + (var(--bs-padding-base-vertical) + 1px));
 }
 .form-horizontal .form-group {
-  margin-right: round(down, calc( var(--bs-grid-gutter-width)  / -2), 1px);
-  margin-left: round(up, calc( var(--bs-grid-gutter-width)  / -2), 1px);
+  margin-right: calc(var(--bs-grid-gutter-width) / -2);
+  margin-left: calc(var(--bs-grid-gutter-width) / -2);
+}
+@supports (width: round(up, 1px, 1px)) {
+  .form-horizontal .form-group {
+    margin-right: round(down, calc( var(--bs-grid-gutter-width)  / -2), 1px);
+    margin-left: round(up, calc( var(--bs-grid-gutter-width)  / -2), 1px);
+  }
 }
 @media (min-width: 768px) {
   .form-horizontal .control-label {
@@ -3544,7 +3690,12 @@ select[multiple].input-lg {
   }
 }
 .form-horizontal .has-feedback .form-control-feedback {
-  right: round(down, calc(var(--bs-grid-gutter-width) / 2), 1px);
+  right: calc(var(--bs-grid-gutter-width) / 2);
+}
+@supports (width: round(up, 1px, 1px)) {
+  .form-horizontal .has-feedback .form-control-feedback {
+    right: round(down, calc(var(--bs-grid-gutter-width) / 2), 1px);
+  }
 }
 @media (min-width: 768px) {
   .form-horizontal .form-group-lg .control-label {
@@ -3617,21 +3768,42 @@ fieldset[disabled] a.btn {
 .btn-default:focus,
 .btn-default.focus {
   color: var(--bs-btn-default-color);
-  background-color: hsl(from var(--bs-btn-default-bg) h s calc(l - 10));
-  border-color: hsl(from var(--bs-btn-default-border) h s calc(l - 25));
+  background-color: var(--bs-btn-default-bg);
+  border-color: var(--bs-btn-default-border);
+}
+@supports (color: hsl(from #000 h s calc(l - 1))) {
+  .btn-default:focus,
+  .btn-default.focus {
+    background-color: hsl(from var(--bs-btn-default-bg) h s calc(l - 10));
+    border-color: hsl(from var(--bs-btn-default-border) h s calc(l - 25));
+  }
 }
 .btn-default:hover {
   color: var(--bs-btn-default-color);
-  background-color: hsl(from var(--bs-btn-default-bg) h s calc(l - 10));
-  border-color: hsl(from var(--bs-btn-default-border) h s calc(l - 12));
+  background-color: var(--bs-btn-default-bg);
+  border-color: var(--bs-btn-default-border);
+}
+@supports (color: hsl(from #000 h s calc(l - 1))) {
+  .btn-default:hover {
+    background-color: hsl(from var(--bs-btn-default-bg) h s calc(l - 10));
+    border-color: hsl(from var(--bs-btn-default-border) h s calc(l - 12));
+  }
 }
 .btn-default:active,
 .btn-default.active,
 .open > .dropdown-toggle.btn-default {
   color: var(--bs-btn-default-color);
-  background-color: hsl(from var(--bs-btn-default-bg) h s calc(l - 10));
+  background-color: var(--bs-btn-default-bg);
   background-image: none;
-  border-color: hsl(from var(--bs-btn-default-border) h s calc(l - 12));
+  border-color: var(--bs-btn-default-border);
+}
+@supports (color: hsl(from #000 h s calc(l - 1))) {
+  .btn-default:active,
+  .btn-default.active,
+  .open > .dropdown-toggle.btn-default {
+    background-color: hsl(from var(--bs-btn-default-bg) h s calc(l - 10));
+    border-color: hsl(from var(--bs-btn-default-border) h s calc(l - 12));
+  }
 }
 .btn-default:active:hover,
 .btn-default.active:hover,
@@ -3643,8 +3815,22 @@ fieldset[disabled] a.btn {
 .btn-default.active.focus,
 .open > .dropdown-toggle.btn-default.focus {
   color: var(--bs-btn-default-color);
-  background-color: hsl(from var(--bs-btn-default-bg) h s calc(l - 17));
-  border-color: hsl(from var(--bs-btn-default-border) h s calc(l - 25));
+  background-color: var(--bs-btn-default-bg);
+  border-color: var(--bs-btn-default-border);
+}
+@supports (color: hsl(from #000 h s calc(l - 1))) {
+  .btn-default:active:hover,
+  .btn-default.active:hover,
+  .open > .dropdown-toggle.btn-default:hover,
+  .btn-default:active:focus,
+  .btn-default.active:focus,
+  .open > .dropdown-toggle.btn-default:focus,
+  .btn-default:active.focus,
+  .btn-default.active.focus,
+  .open > .dropdown-toggle.btn-default.focus {
+    background-color: hsl(from var(--bs-btn-default-bg) h s calc(l - 17));
+    border-color: hsl(from var(--bs-btn-default-border) h s calc(l - 25));
+  }
 }
 .btn-default.disabled:hover,
 .btn-default[disabled]:hover,
@@ -3670,21 +3856,42 @@ fieldset[disabled] .btn-default.focus {
 .btn-primary:focus,
 .btn-primary.focus {
   color: var(--bs-btn-primary-color);
-  background-color: hsl(from var(--bs-btn-primary-bg) h s calc(l - 10));
-  border-color: hsl(from var(--bs-btn-primary-border) h s calc(l - 25));
+  background-color: var(--bs-btn-primary-bg);
+  border-color: var(--bs-btn-primary-border);
+}
+@supports (color: hsl(from #000 h s calc(l - 1))) {
+  .btn-primary:focus,
+  .btn-primary.focus {
+    background-color: hsl(from var(--bs-btn-primary-bg) h s calc(l - 10));
+    border-color: hsl(from var(--bs-btn-primary-border) h s calc(l - 25));
+  }
 }
 .btn-primary:hover {
   color: var(--bs-btn-primary-color);
-  background-color: hsl(from var(--bs-btn-primary-bg) h s calc(l - 10));
-  border-color: hsl(from var(--bs-btn-primary-border) h s calc(l - 12));
+  background-color: var(--bs-btn-primary-bg);
+  border-color: var(--bs-btn-primary-border);
+}
+@supports (color: hsl(from #000 h s calc(l - 1))) {
+  .btn-primary:hover {
+    background-color: hsl(from var(--bs-btn-primary-bg) h s calc(l - 10));
+    border-color: hsl(from var(--bs-btn-primary-border) h s calc(l - 12));
+  }
 }
 .btn-primary:active,
 .btn-primary.active,
 .open > .dropdown-toggle.btn-primary {
   color: var(--bs-btn-primary-color);
-  background-color: hsl(from var(--bs-btn-primary-bg) h s calc(l - 10));
+  background-color: var(--bs-btn-primary-bg);
   background-image: none;
-  border-color: hsl(from var(--bs-btn-primary-border) h s calc(l - 12));
+  border-color: var(--bs-btn-primary-border);
+}
+@supports (color: hsl(from #000 h s calc(l - 1))) {
+  .btn-primary:active,
+  .btn-primary.active,
+  .open > .dropdown-toggle.btn-primary {
+    background-color: hsl(from var(--bs-btn-primary-bg) h s calc(l - 10));
+    border-color: hsl(from var(--bs-btn-primary-border) h s calc(l - 12));
+  }
 }
 .btn-primary:active:hover,
 .btn-primary.active:hover,
@@ -3696,8 +3903,22 @@ fieldset[disabled] .btn-default.focus {
 .btn-primary.active.focus,
 .open > .dropdown-toggle.btn-primary.focus {
   color: var(--bs-btn-primary-color);
-  background-color: hsl(from var(--bs-btn-primary-bg) h s calc(l - 17));
-  border-color: hsl(from var(--bs-btn-primary-border) h s calc(l - 25));
+  background-color: var(--bs-btn-primary-bg);
+  border-color: var(--bs-btn-primary-border);
+}
+@supports (color: hsl(from #000 h s calc(l - 1))) {
+  .btn-primary:active:hover,
+  .btn-primary.active:hover,
+  .open > .dropdown-toggle.btn-primary:hover,
+  .btn-primary:active:focus,
+  .btn-primary.active:focus,
+  .open > .dropdown-toggle.btn-primary:focus,
+  .btn-primary:active.focus,
+  .btn-primary.active.focus,
+  .open > .dropdown-toggle.btn-primary.focus {
+    background-color: hsl(from var(--bs-btn-primary-bg) h s calc(l - 17));
+    border-color: hsl(from var(--bs-btn-primary-border) h s calc(l - 25));
+  }
 }
 .btn-primary.disabled:hover,
 .btn-primary[disabled]:hover,
@@ -3723,21 +3944,42 @@ fieldset[disabled] .btn-primary.focus {
 .btn-success:focus,
 .btn-success.focus {
   color: var(--bs-btn-success-color);
-  background-color: hsl(from var(--bs-btn-success-bg) h s calc(l - 10));
-  border-color: hsl(from var(--bs-btn-success-border) h s calc(l - 25));
+  background-color: var(--bs-btn-success-bg);
+  border-color: var(--bs-btn-success-border);
+}
+@supports (color: hsl(from #000 h s calc(l - 1))) {
+  .btn-success:focus,
+  .btn-success.focus {
+    background-color: hsl(from var(--bs-btn-success-bg) h s calc(l - 10));
+    border-color: hsl(from var(--bs-btn-success-border) h s calc(l - 25));
+  }
 }
 .btn-success:hover {
   color: var(--bs-btn-success-color);
-  background-color: hsl(from var(--bs-btn-success-bg) h s calc(l - 10));
-  border-color: hsl(from var(--bs-btn-success-border) h s calc(l - 12));
+  background-color: var(--bs-btn-success-bg);
+  border-color: var(--bs-btn-success-border);
+}
+@supports (color: hsl(from #000 h s calc(l - 1))) {
+  .btn-success:hover {
+    background-color: hsl(from var(--bs-btn-success-bg) h s calc(l - 10));
+    border-color: hsl(from var(--bs-btn-success-border) h s calc(l - 12));
+  }
 }
 .btn-success:active,
 .btn-success.active,
 .open > .dropdown-toggle.btn-success {
   color: var(--bs-btn-success-color);
-  background-color: hsl(from var(--bs-btn-success-bg) h s calc(l - 10));
+  background-color: var(--bs-btn-success-bg);
   background-image: none;
-  border-color: hsl(from var(--bs-btn-success-border) h s calc(l - 12));
+  border-color: var(--bs-btn-success-border);
+}
+@supports (color: hsl(from #000 h s calc(l - 1))) {
+  .btn-success:active,
+  .btn-success.active,
+  .open > .dropdown-toggle.btn-success {
+    background-color: hsl(from var(--bs-btn-success-bg) h s calc(l - 10));
+    border-color: hsl(from var(--bs-btn-success-border) h s calc(l - 12));
+  }
 }
 .btn-success:active:hover,
 .btn-success.active:hover,
@@ -3749,8 +3991,22 @@ fieldset[disabled] .btn-primary.focus {
 .btn-success.active.focus,
 .open > .dropdown-toggle.btn-success.focus {
   color: var(--bs-btn-success-color);
-  background-color: hsl(from var(--bs-btn-success-bg) h s calc(l - 17));
-  border-color: hsl(from var(--bs-btn-success-border) h s calc(l - 25));
+  background-color: var(--bs-btn-success-bg);
+  border-color: var(--bs-btn-success-border);
+}
+@supports (color: hsl(from #000 h s calc(l - 1))) {
+  .btn-success:active:hover,
+  .btn-success.active:hover,
+  .open > .dropdown-toggle.btn-success:hover,
+  .btn-success:active:focus,
+  .btn-success.active:focus,
+  .open > .dropdown-toggle.btn-success:focus,
+  .btn-success:active.focus,
+  .btn-success.active.focus,
+  .open > .dropdown-toggle.btn-success.focus {
+    background-color: hsl(from var(--bs-btn-success-bg) h s calc(l - 17));
+    border-color: hsl(from var(--bs-btn-success-border) h s calc(l - 25));
+  }
 }
 .btn-success.disabled:hover,
 .btn-success[disabled]:hover,
@@ -3776,21 +4032,42 @@ fieldset[disabled] .btn-success.focus {
 .btn-info:focus,
 .btn-info.focus {
   color: var(--bs-btn-info-color);
-  background-color: hsl(from var(--bs-btn-info-bg) h s calc(l - 10));
-  border-color: hsl(from var(--bs-btn-info-border) h s calc(l - 25));
+  background-color: var(--bs-btn-info-bg);
+  border-color: var(--bs-btn-info-border);
+}
+@supports (color: hsl(from #000 h s calc(l - 1))) {
+  .btn-info:focus,
+  .btn-info.focus {
+    background-color: hsl(from var(--bs-btn-info-bg) h s calc(l - 10));
+    border-color: hsl(from var(--bs-btn-info-border) h s calc(l - 25));
+  }
 }
 .btn-info:hover {
   color: var(--bs-btn-info-color);
-  background-color: hsl(from var(--bs-btn-info-bg) h s calc(l - 10));
-  border-color: hsl(from var(--bs-btn-info-border) h s calc(l - 12));
+  background-color: var(--bs-btn-info-bg);
+  border-color: var(--bs-btn-info-border);
+}
+@supports (color: hsl(from #000 h s calc(l - 1))) {
+  .btn-info:hover {
+    background-color: hsl(from var(--bs-btn-info-bg) h s calc(l - 10));
+    border-color: hsl(from var(--bs-btn-info-border) h s calc(l - 12));
+  }
 }
 .btn-info:active,
 .btn-info.active,
 .open > .dropdown-toggle.btn-info {
   color: var(--bs-btn-info-color);
-  background-color: hsl(from var(--bs-btn-info-bg) h s calc(l - 10));
+  background-color: var(--bs-btn-info-bg);
   background-image: none;
-  border-color: hsl(from var(--bs-btn-info-border) h s calc(l - 12));
+  border-color: var(--bs-btn-info-border);
+}
+@supports (color: hsl(from #000 h s calc(l - 1))) {
+  .btn-info:active,
+  .btn-info.active,
+  .open > .dropdown-toggle.btn-info {
+    background-color: hsl(from var(--bs-btn-info-bg) h s calc(l - 10));
+    border-color: hsl(from var(--bs-btn-info-border) h s calc(l - 12));
+  }
 }
 .btn-info:active:hover,
 .btn-info.active:hover,
@@ -3802,8 +4079,22 @@ fieldset[disabled] .btn-success.focus {
 .btn-info.active.focus,
 .open > .dropdown-toggle.btn-info.focus {
   color: var(--bs-btn-info-color);
-  background-color: hsl(from var(--bs-btn-info-bg) h s calc(l - 17));
-  border-color: hsl(from var(--bs-btn-info-border) h s calc(l - 25));
+  background-color: var(--bs-btn-info-bg);
+  border-color: var(--bs-btn-info-border);
+}
+@supports (color: hsl(from #000 h s calc(l - 1))) {
+  .btn-info:active:hover,
+  .btn-info.active:hover,
+  .open > .dropdown-toggle.btn-info:hover,
+  .btn-info:active:focus,
+  .btn-info.active:focus,
+  .open > .dropdown-toggle.btn-info:focus,
+  .btn-info:active.focus,
+  .btn-info.active.focus,
+  .open > .dropdown-toggle.btn-info.focus {
+    background-color: hsl(from var(--bs-btn-info-bg) h s calc(l - 17));
+    border-color: hsl(from var(--bs-btn-info-border) h s calc(l - 25));
+  }
 }
 .btn-info.disabled:hover,
 .btn-info[disabled]:hover,
@@ -3829,21 +4120,42 @@ fieldset[disabled] .btn-info.focus {
 .btn-warning:focus,
 .btn-warning.focus {
   color: var(--bs-btn-warning-color);
-  background-color: hsl(from var(--bs-btn-warning-bg) h s calc(l - 10));
-  border-color: hsl(from var(--bs-btn-warning-border) h s calc(l - 25));
+  background-color: var(--bs-btn-warning-bg);
+  border-color: var(--bs-btn-warning-border);
+}
+@supports (color: hsl(from #000 h s calc(l - 1))) {
+  .btn-warning:focus,
+  .btn-warning.focus {
+    background-color: hsl(from var(--bs-btn-warning-bg) h s calc(l - 10));
+    border-color: hsl(from var(--bs-btn-warning-border) h s calc(l - 25));
+  }
 }
 .btn-warning:hover {
   color: var(--bs-btn-warning-color);
-  background-color: hsl(from var(--bs-btn-warning-bg) h s calc(l - 10));
-  border-color: hsl(from var(--bs-btn-warning-border) h s calc(l - 12));
+  background-color: var(--bs-btn-warning-bg);
+  border-color: var(--bs-btn-warning-border);
+}
+@supports (color: hsl(from #000 h s calc(l - 1))) {
+  .btn-warning:hover {
+    background-color: hsl(from var(--bs-btn-warning-bg) h s calc(l - 10));
+    border-color: hsl(from var(--bs-btn-warning-border) h s calc(l - 12));
+  }
 }
 .btn-warning:active,
 .btn-warning.active,
 .open > .dropdown-toggle.btn-warning {
   color: var(--bs-btn-warning-color);
-  background-color: hsl(from var(--bs-btn-warning-bg) h s calc(l - 10));
+  background-color: var(--bs-btn-warning-bg);
   background-image: none;
-  border-color: hsl(from var(--bs-btn-warning-border) h s calc(l - 12));
+  border-color: var(--bs-btn-warning-border);
+}
+@supports (color: hsl(from #000 h s calc(l - 1))) {
+  .btn-warning:active,
+  .btn-warning.active,
+  .open > .dropdown-toggle.btn-warning {
+    background-color: hsl(from var(--bs-btn-warning-bg) h s calc(l - 10));
+    border-color: hsl(from var(--bs-btn-warning-border) h s calc(l - 12));
+  }
 }
 .btn-warning:active:hover,
 .btn-warning.active:hover,
@@ -3855,8 +4167,22 @@ fieldset[disabled] .btn-info.focus {
 .btn-warning.active.focus,
 .open > .dropdown-toggle.btn-warning.focus {
   color: var(--bs-btn-warning-color);
-  background-color: hsl(from var(--bs-btn-warning-bg) h s calc(l - 17));
-  border-color: hsl(from var(--bs-btn-warning-border) h s calc(l - 25));
+  background-color: var(--bs-btn-warning-bg);
+  border-color: var(--bs-btn-warning-border);
+}
+@supports (color: hsl(from #000 h s calc(l - 1))) {
+  .btn-warning:active:hover,
+  .btn-warning.active:hover,
+  .open > .dropdown-toggle.btn-warning:hover,
+  .btn-warning:active:focus,
+  .btn-warning.active:focus,
+  .open > .dropdown-toggle.btn-warning:focus,
+  .btn-warning:active.focus,
+  .btn-warning.active.focus,
+  .open > .dropdown-toggle.btn-warning.focus {
+    background-color: hsl(from var(--bs-btn-warning-bg) h s calc(l - 17));
+    border-color: hsl(from var(--bs-btn-warning-border) h s calc(l - 25));
+  }
 }
 .btn-warning.disabled:hover,
 .btn-warning[disabled]:hover,
@@ -3882,21 +4208,42 @@ fieldset[disabled] .btn-warning.focus {
 .btn-danger:focus,
 .btn-danger.focus {
   color: var(--bs-btn-danger-color);
-  background-color: hsl(from var(--bs-btn-danger-bg) h s calc(l - 10));
-  border-color: hsl(from var(--bs-btn-danger-border) h s calc(l - 25));
+  background-color: var(--bs-btn-danger-bg);
+  border-color: var(--bs-btn-danger-border);
+}
+@supports (color: hsl(from #000 h s calc(l - 1))) {
+  .btn-danger:focus,
+  .btn-danger.focus {
+    background-color: hsl(from var(--bs-btn-danger-bg) h s calc(l - 10));
+    border-color: hsl(from var(--bs-btn-danger-border) h s calc(l - 25));
+  }
 }
 .btn-danger:hover {
   color: var(--bs-btn-danger-color);
-  background-color: hsl(from var(--bs-btn-danger-bg) h s calc(l - 10));
-  border-color: hsl(from var(--bs-btn-danger-border) h s calc(l - 12));
+  background-color: var(--bs-btn-danger-bg);
+  border-color: var(--bs-btn-danger-border);
+}
+@supports (color: hsl(from #000 h s calc(l - 1))) {
+  .btn-danger:hover {
+    background-color: hsl(from var(--bs-btn-danger-bg) h s calc(l - 10));
+    border-color: hsl(from var(--bs-btn-danger-border) h s calc(l - 12));
+  }
 }
 .btn-danger:active,
 .btn-danger.active,
 .open > .dropdown-toggle.btn-danger {
   color: var(--bs-btn-danger-color);
-  background-color: hsl(from var(--bs-btn-danger-bg) h s calc(l - 10));
+  background-color: var(--bs-btn-danger-bg);
   background-image: none;
-  border-color: hsl(from var(--bs-btn-danger-border) h s calc(l - 12));
+  border-color: var(--bs-btn-danger-border);
+}
+@supports (color: hsl(from #000 h s calc(l - 1))) {
+  .btn-danger:active,
+  .btn-danger.active,
+  .open > .dropdown-toggle.btn-danger {
+    background-color: hsl(from var(--bs-btn-danger-bg) h s calc(l - 10));
+    border-color: hsl(from var(--bs-btn-danger-border) h s calc(l - 12));
+  }
 }
 .btn-danger:active:hover,
 .btn-danger.active:hover,
@@ -3908,8 +4255,22 @@ fieldset[disabled] .btn-warning.focus {
 .btn-danger.active.focus,
 .open > .dropdown-toggle.btn-danger.focus {
   color: var(--bs-btn-danger-color);
-  background-color: hsl(from var(--bs-btn-danger-bg) h s calc(l - 17));
-  border-color: hsl(from var(--bs-btn-danger-border) h s calc(l - 25));
+  background-color: var(--bs-btn-danger-bg);
+  border-color: var(--bs-btn-danger-border);
+}
+@supports (color: hsl(from #000 h s calc(l - 1))) {
+  .btn-danger:active:hover,
+  .btn-danger.active:hover,
+  .open > .dropdown-toggle.btn-danger:hover,
+  .btn-danger:active:focus,
+  .btn-danger.active:focus,
+  .open > .dropdown-toggle.btn-danger:focus,
+  .btn-danger:active.focus,
+  .btn-danger.active.focus,
+  .open > .dropdown-toggle.btn-danger.focus {
+    background-color: hsl(from var(--bs-btn-danger-bg) h s calc(l - 17));
+    border-color: hsl(from var(--bs-btn-danger-border) h s calc(l - 25));
+  }
 }
 .btn-danger.disabled:hover,
 .btn-danger[disabled]:hover,
@@ -5177,7 +5538,13 @@ fieldset[disabled] .navbar-default .btn-link:focus {
 }
 .navbar-inverse .navbar-collapse,
 .navbar-inverse .navbar-form {
-  border-color: hsl(from var(--bs-navbar-inverse-bg) h s calc(l - 7));
+  border-color: var(--bs-navbar-inverse-bg);
+}
+@supports (color: hsl(from #000 h s calc(l - 1))) {
+  .navbar-inverse .navbar-collapse,
+  .navbar-inverse .navbar-form {
+    border-color: hsl(from var(--bs-navbar-inverse-bg) h s calc(l - 7));
+  }
 }
 .navbar-inverse .navbar-link {
   color: var(--bs-navbar-inverse-link-color);
@@ -5516,7 +5883,12 @@ a.badge:focus {
   font-weight: 200;
 }
 .jumbotron > hr {
-  border-top-color: hsl(from var(--bs-jumbotron-bg) h s calc(l - 10));
+  border-top-color: var(--bs-jumbotron-bg);
+}
+@supports (color: hsl(from #000 h s calc(l - 1))) {
+  .jumbotron > hr {
+    border-top-color: hsl(from var(--bs-jumbotron-bg) h s calc(l - 10));
+  }
 }
 .container .jumbotron,
 .container-fluid .jumbotron {
@@ -6049,8 +6421,13 @@ button.list-group-item-danger.active:focus {
 .panel-title {
   margin-top: 0;
   margin-bottom: 0;
-  font-size: round(up, calc(var(--bs-font-size-base) * 1.125), 1px);
+  font-size: calc(var(--bs-font-size-base) * 1.125);
   color: inherit;
+}
+@supports (width: round(up, 1px, 1px)) {
+  .panel-title {
+    font-size: round(up, calc(var(--bs-font-size-base) * 1.125), 1px);
+  }
 }
 .panel-title > a,
 .panel-title > small,
@@ -6782,8 +7159,13 @@ button.close {
   margin: 0;
   font-size: var(--bs-font-size-base);
   background-color: var(--bs-popover-title-bg);
-  border-bottom: 1px solid hsl(from var(--bs-popover-title-bg) h s calc(l - 5));
+  border-bottom: 1px solid var(--bs-popover-title-bg);
   border-radius: calc(var(--bs-border-radius-large) - 1px) calc(var(--bs-border-radius-large) - 1px) 0 0;
+}
+@supports (color: hsl(from #000 h s calc(l - 1))) {
+  .popover-title {
+    border-bottom: 1px solid hsl(from var(--bs-popover-title-bg) h s calc(l - 5));
+  }
 }
 .popover-content {
   padding: 9px 14px;
