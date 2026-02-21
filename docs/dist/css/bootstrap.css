@@ -396,7 +396,6 @@
 /*! normalize.css v3.0.3 | MIT License | github.com/necolas/normalize.css */
 html {
   font-family: sans-serif;
-  -ms-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
 }
 body {
@@ -3028,7 +3027,6 @@ th {
     width: 100%;
     margin-bottom: calc(var(--bs-line-height-computed) * 0.75);
     overflow-y: hidden;
-    -ms-overflow-style: -ms-autohiding-scrollbar;
     border: 1px solid var(--bs-table-border-color);
   }
   .table-responsive > .table {
@@ -3158,15 +3156,8 @@ output {
   color: var(--bs-input-color-placeholder);
   opacity: 1;
 }
-.form-control:-ms-input-placeholder {
+.form-control::placeholder {
   color: var(--bs-input-color-placeholder);
-}
-.form-control::-webkit-input-placeholder {
-  color: var(--bs-input-color-placeholder);
-}
-.form-control::-ms-expand {
-  background-color: transparent;
-  border: 0;
 }
 .form-control[disabled],
 .form-control[readonly],
@@ -5760,7 +5751,6 @@ a.thumbnail.active {
 .media,
 .media-body {
   overflow: hidden;
-  zoom: 1;
 }
 .media-body {
   width: 10000px;
@@ -6985,11 +6975,11 @@ button.close {
   }
   .carousel-control .glyphicon-chevron-left,
   .carousel-control .icon-prev {
-    margin-left: calc(var(--bs-carousel-control-font-size) / -2px);
+    margin-left: calc((var(--bs-carousel-control-font-size) / 2) * -1);
   }
   .carousel-control .glyphicon-chevron-right,
   .carousel-control .icon-next {
-    margin-right: calc(var(--bs-carousel-control-font-size) / -2px);
+    margin-right: calc((var(--bs-carousel-control-font-size) / 2) * -1);
   }
   .carousel-caption {
     right: 20%;
