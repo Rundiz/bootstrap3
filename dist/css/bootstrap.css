@@ -3605,7 +3605,7 @@ select[multiple].input-lg {
   margin-bottom: 10px;
   color: var(--bs-text-color);
 }
-@supports (color: hsl(from #000 h s calc(l + 1))) {
+@supports (color: hsl(from #000 h s calc(l - 1))) {
   .help-block {
     color: hsl(from var(--bs-text-color) h s calc(l + 25));
   }
