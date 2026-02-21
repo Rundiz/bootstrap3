@@ -27,7 +27,7 @@ There is no new or extra features than original Bootstrap 3 and no new feature r
 
 ## Limitations
 
-This repo. uses CSS variables, for example `--background-color: #fff;` and `background-color: var(--background-color);`. So, it does not support Internet Explorer (IE). If you would like to use old browsers, please use original Bootstrap 3.
+This repo uses CSS variables, for example `--background-color: #fff;` and `background-color: var(--background-color);`, and many CSS functions such as `hsl()` including relative colors. So, it does not support Internet Explorer (IE). If you would like to use old browsers, please use original Bootstrap 3.
 
 
 ## Quick start

@@ -22,15 +22,15 @@ plugins:
 # Custom vars
 title:            Bootstrap
 description:      "The world's most popular mobile-first and responsive front-end framework."
-current_version:  3.4.2
+current_version:  3.4.3
 docs_version:     3.4
 repo:             https://github.com/twbs/bootstrap
 sass_repo:        https://github.com/twbs/bootstrap-sass
 
 download:
-  source:         https://github.com/twbs/bootstrap/archive/v3.4.2.zip
-  dist:           https://github.com/twbs/bootstrap/releases/download/v3.4.2/bootstrap-3.4.2-dist.zip
-  sass:           https://github.com/twbs/bootstrap-sass/archive/v3.4.2.tar.gz
+  source:         https://github.com/twbs/bootstrap/archive/v3.4.3.zip
+  dist:           https://github.com/twbs/bootstrap/releases/download/v3.4.3/bootstrap-3.4.3-dist.zip
+  sass:           https://github.com/twbs/bootstrap-sass/archive/v3.4.3.tar.gz
 
 blog:             https://blog.getbootstrap.com
 expo:             https://expo.getbootstrap.com
@@ -38,9 +38,9 @@ themes:           https://themes.getbootstrap.com
 
 cdn:
   # See https://www.srihash.org for info on how to generate the hashes
-  css:            https://stackpath.bootstrapcdn.com/bootstrap/3.4.2/css/bootstrap.min.css
-  css_hash:       "sha384-BWAXwTL2VLNqloyW6z7oS7Q/bAaW5rerhNts5ZMLUIMsRuuHEXiQ8jst6DPpAEI0"
-  css_theme:      https://stackpath.bootstrapcdn.com/bootstrap/3.4.2/css/bootstrap-theme.min.css
-  css_theme_hash: "sha384-Zgu2jZ3YZ3PslZsFeUk1zO4tjmRvw6NP/Ry2SfvGN0Nm29sj160uuxrPFYpWc15c"
-  js:             https://stackpath.bootstrapcdn.com/bootstrap/3.4.2/js/bootstrap.min.js
-  js_hash:        "sha384-T6duU810h05V2xJbWf+s83Kq40xbYZIIM2LbNh0hSMXDzIhyrOsZwcQEnm1Q6xDv"
+  css:            https://stackpath.bootstrapcdn.com/bootstrap/3.4.3/css/bootstrap.min.css
+  css_hash:       "sha384-qjyuT1caouIA7JNPpGelWVlqhb7NxbJOefyRfFx/40j0vtE5cvQLqaP/Z0XGIevV"
+  css_theme:      https://stackpath.bootstrapcdn.com/bootstrap/3.4.3/css/bootstrap-theme.min.css
+  css_theme_hash: "sha384-CUnFWzXMfCYptFyDg9LcakkHx+ClUlyWbqBySWI2XFahXMGs/o9r86LCfDQWVVfR"
+  js:             https://stackpath.bootstrapcdn.com/bootstrap/3.4.3/js/bootstrap.min.js
+  js_hash:        "sha384-XloQ67RK68Cszi5LqD0ey3XasaudaH4s/1xcF2MJx75OXjrZvEuJvjXpIlWYnyFr"
